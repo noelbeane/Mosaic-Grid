@@ -1,8 +1,10 @@
 Mosaic Grid
 ==============
 
-A responsive layout developed with the Masonry JS grid layout library.
+Summary
 --------------
+
+A responsive layout developed with the Masonry JS grid layout library.
 
 *This will be Italic*
 
