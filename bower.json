@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "dependencies": {
     "jquery": "latest",
-    "masonry": "latest"
+    "masonry": "latest",
+    "modernizr": "latest",
+    "jquery-ui": "latest"
   }
 }
