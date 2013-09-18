@@ -2,7 +2,6 @@
   "name": "mosaicgrid",
   "version": "0.0.0",
   "dependencies": {
-    "modernizr": "~2.6.2",
-    "jquery": "~2.0.0",
+    "jquery": "latest",
   }
 }
