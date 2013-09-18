@@ -1,0 +1,8 @@
+{
+	"name": "MosaicGrid"
+	"version": "1.0.0"
+	"main": "./js/mosaicgrid.js"
+	"dependencies":n{
+		"jquery": "latest"
+	}
+}
