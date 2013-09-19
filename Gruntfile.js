@@ -4,43 +4,54 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     
+    concat: {
+      options: {
+        separator: ';'
+      },
+      dist: {
+        src: ['src/**/*.js'],
+        dest: 'dist/<%= pkg.name %>.js'
+      }
+    },
     uglify: {
       options: {
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+        banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
       },
-      build: {
-        src: 'src/<%= pkg.name %>.js',
-        dest: 'build/<%= pkg.name %>.min.js'
-      }
-    },
-    
-    compass: {                  // Task
-      dist: {                   // Target
-        options: {              // Target options
-          sassDir: 'sass',
-          cssDir: 'css',
-          environment: 'production'
-        }
-      },
-      dev: {                    // Another target
-        options: {
-          sassDir: 'sass',
-          cssDir: 'css'
+      dist: {
+        files: {
+          'dist/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
         }
       }
     },
-    
+    qunit: {
+      files: ['test/**/*.html']
+    },
     jshint: {
-      myFiles: ['js/**/*.js', 'bower_components/**/*.js', 'node_modules/**/*.js']
+      files: ['Gruntfile.js', 'src/**/*.js', 'test/**/*.js'],
+      options: {
+        // options here to override JSHint defaults
+        globals: {
+          jQuery: true,
+          console: true,
+          module: true,
+          document: true
+        }
+      }
+    },
+    watch: {
+      files: ['<%= jshint.files %>'],
+      tasks: ['jshint', 'qunit']
     }
+  });
 
-  // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-compass');
-  grunt.loadNpmTasks('grunt-contrib-jshint');#sthash.P2mKurAb.dpuf
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-qunit');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 
-  // Default task(s).
-  grunt.registerTask('default', ['uglify']);
-  grunt.registerTask('default', ['jshint', 'compass']);
+  grunt.registerTask('test', ['jshint', 'qunit']);
+
+  grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify']);
 
 };
