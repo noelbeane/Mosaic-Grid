@@ -1,0 +1,181 @@
+///////////////////////////////
+/////   Media Queries
+//////////////////////////////
+
+
+//////////////////////////////////////////
+// MEDIA QUERY  -  SMALL
+/////////////////////////////////////////
+@media only screen and (min-width: 280px) {
+  .msnry_item {
+    width: 99%;
+  }
+  .rail {
+	display: none;
+  }
+  .header-wrapper {
+	width:100%;
+  }
+  .sitelogo-wrapper {
+	width:90%;
+  }
+  .searchbox-wrapper {
+	display: none;
+  }
+  .toolbox-wrapper {
+	width:10%;
+  }
+  .subnav-wrapper {
+	display: none;
+  }
+  .socnet-wrapper {
+	width: 15%;
+  }
+  .main-content-wrapper {
+	width: 85%;
+  }
+  .mobile-search {
+	display:block;
+  }
+  .glyphfont {
+	font-size: 1.5em;
+  }
+  .filetype-font {
+	font-size: 1.5em;
+  }
+}
+
+//////////////////////////////////////////
+// MEDIA QUERY  -  MEDIUM
+/////////////////////////////////////////
+@media only screen and (min-width: 620px) {
+  .msnry_item {
+    width: 48%;
+  }
+  .rail {
+	display: none;
+  }
+  .header-wrapper {
+	width:100%;
+  }
+  .sitelogo-wrapper {
+	width:90%;
+  }
+  .searchbox-wrapper {
+	display: none;
+  }
+  .toolbox-wrapper {
+	width:10%;
+  }
+  .subnav-wrapper {
+	display: none;
+  }
+  .socnet-wrapper {
+	width: 15%;
+  }
+  .main-content-wrapper {
+	width: 85%;
+  }
+  .mobile-search {
+	display:block;
+  }
+  .glyphfont {
+	font-size: 1.5em;
+  }
+  .filetype-font {
+	font-size: 1.5em;
+  }
+}
+
+
+//////////////////////////////////////////
+// MEDIA QUERY  -  LARGE
+/////////////////////////////////////////
+@media only screen and (min-width: 920px) { 
+  .msnry_item {
+    width: 32%;
+  }
+  .rail {
+	width: 8.33333%;
+	display: inline-block;
+  }
+  .header-wrapper {
+	width: 83.33333%;
+  }
+  .sitelogo-wrapper {
+	width:40%;
+  }
+  .searchbox-wrapper {
+	width:40%;
+	display: inline-block;
+  }
+  .toolbox-wrapper {
+	width:20%;
+  }
+  .subnav-wrapper {
+	width: 8.33333%;
+	display: inline-block;
+  }
+  .socnet-wrapper {
+	width: 8.33333%;
+	clear: none;
+  }
+  .main-content-wrapper {
+	width: 83.33333%;
+  }
+  .mobile-search {
+	display:none;
+  }
+  .glyphfont {
+	font-size: 1.5em;
+  }
+  .filetype-font {
+	font-size: 1.5em;
+  }
+}
+
+//////////////////////////////////////////
+// MEDIA QUERY  -  X-LARGE
+/////////////////////////////////////////
+@media only screen and (min-width: 1400px) { 
+  .msnry_item {
+    width: 24%;
+  }  
+  .rail {
+	width: 8.33333%;
+	display: inline-block;
+  }
+  .header-wrapper {
+	width: 83.33333%;
+  }
+  .sitelogo-wrapper {
+	width:40%;
+  }
+  .searchbox-wrapper {
+	width:40%;
+	display: inline-block;
+  }
+  .toolbox-wrapper {
+	width:20%;
+  }
+  .subnav-wrapper {
+	width: 8.33333%;
+	display: inline-block;
+  }
+  .socnet-wrapper {
+	width: 8.33333%;
+	clear: none;
+  }
+  .main-content-wrapper {
+	width: 83.33333%;
+  }
+  .mobile-search {
+	display:none;
+  }
+  .glyphfont {
+	font-size: 2em;
+  }
+  .filetype-font {
+	font-size: 1.75em;
+  }
+}
