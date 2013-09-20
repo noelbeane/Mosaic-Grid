@@ -1,4 +1,6 @@
-/* Mosaic Grid Core */
+////////////////////////////  
+///  MOSAIC GRID SASS  
+////////////////////////////
 
 @import "partials/mixins";
 
@@ -6,12 +8,12 @@
 
 
 body {
-  background-image:$bkg_pattern;
+  background-image:$bkg_pattern_01;
   margin: 0;
 }
 
 p {
-  color: #000;
+  color: #ddd;
   font-family: "museo-sans",sans-serif;
   font-weight: 300;
   font-size: 1em;
@@ -62,16 +64,35 @@ header {
 	overflow:hidden;
 	border: 0;
 	background: $header_bkg;
-	-webkit-border-radius: 0 0 $radius $radius;
-	border-radius: 0 0 $radius $radius;
 }
 
 footer {
 	padding: 1em;
 	clear: both;
+	width: 100%;
+	background-image:$bkg_pattern_02;
+	padding: 0.25em 1.5em 2em 1.5em;
+	box-shadow: 0px 2px 2px 0px #222 inset;
+	-webkit-box-shadow: 0px 2px 2px 0px #222 inset;
 	
 	h2 {
 	  color: #999;
+	  font-family: "aviano-sans",sans-serif;
+  	  font-weight: 300;
+  	  font-size: 0.7em;
+  	  text-transform: uppercase;
+  	  letter-spacing: 0.15em;
+  	  line-height: 2em;
+	  text-align: center;	  
+	  
+	  a {
+	    color: $links;
+	    text-decoration: none;
+  	  
+  	    &:hover {
+	      color: $links;
+        }
+	  }
 	}
 }
 
@@ -192,8 +213,8 @@ html .clearfix {
   display: inline-block;
   
   .icomoon {
-    margin: 0.15em 0 0 1em;
-    font-size: 1.5em;
+    margin: 0.35em 0 0 1em;
+    font-size: 1.25em;
     @include rollovers(all, 0.3s, ease-out);
       
     &:hover {
@@ -269,11 +290,11 @@ html .clearfix {
 .subnavList {
 	display: block;
 	visibility: visible;
-	opacity: 1;
+	opacity: 0;
 	height: 180px;
 	
 	ul {
-	  margin: 0;
+	  margin: 0.5em 0 0 0;
 	  padding: 0;
 	}
 	
@@ -352,16 +373,14 @@ html .clearfix {
 }
 .drawer-wrapper {
 	height: 0;
-	background-image:url('../images/textures/grid_drawer.png');
+	background-image:$bkg_pattern_02;
 	overflow-y:hidden;
 	overflow-x:hidden;
-	box-shadow: 0px 2px 2px 0px #000 inset;
-	-webkit-box-shadow: 0px 2px 2px 0px #000 inset;
+	box-shadow: 0px 2px 2px 0px #222 inset;
+	-webkit-box-shadow: 0px 2px 2px 0px #222 inset;
 }
 .sitemenuBtn {
 	display: inline-block;
-	background-image:url('../images/glyphs/mosaicgrid_icons_menu.svg');
-	background-repeat: no-repeat;
 	height: 36px;
 	width: 36px;
 	padding-left: 0.25em;
@@ -378,7 +397,7 @@ html .clearfix {
 }
 .toolbox-wrapper {
 	display: inline-block;
-	padding: 0.3em 0 0 0;
+	padding: 0.75em 0 0 0;
 	margin: 0;
 	width:20%;
 	height: 3em;
@@ -390,7 +409,7 @@ html .clearfix {
 	float: right;
 	
 	.icomoon {
-	  font-size: 2em;
+	  font-size: 1.5em;
 	  @include rollovers(all, 0.3s, ease-out);
       
       &:hover {
@@ -398,55 +417,88 @@ html .clearfix {
       }
 	}
 }
-
 .mainnavList {
 	display: none;
 	overflow: auto;
-}
-.mainnavList li {
-  	background-color:rgba(0,0,0,0);
-  	color: #ccc;
-  	margin-bottom: 1px;
-  	padding: 0.25em 0.25em 0.25em 1.5em;
-  	font-family: "aviano-sans",sans-serif;
-  	font-weight: 700;
-  	font-size: 0.8em;
-  	text-transform: uppercase;
-  	letter-spacing: 0.15em;
-  	line-height: 2em;
-  	cursor: pointer;
-  	list-style: none;
-}
-.mainnavList li:hover {
-	background-color:rgba(0,0,0,0.2);
+	
+	ul {
+	  margin: 0.5em 0 0 0;
+	  padding: 0;
+	}
+	
+	li{
+	  background-color:rgba(0,0,0,0);
+  	  color: #ccc;
+  	  margin: 0;
+  	  padding: 0.25em 0.25em 0.25em 1.5em;
+  	  cursor: pointer;
+  	  list-style: none;
+  	  
+  	  @include rollovers(all, 0.3s, ease-out);
+  	  
+  	  &:hover {
+	    background-color:rgba(0,0,0,0.2);
+      }
+    }
+    
+	a {
+	  color: $links;
+	  text-decoration: none;
+	  font-family: "aviano-sans",sans-serif;
+  	  font-weight: 300;
+  	  font-size: 0.8em;
+  	  text-transform: uppercase;
+  	  letter-spacing: 0.15em;
+  	  line-height: 2em;
+  	  
+  	  @include rollovers(all, 0.3s, ease-out);
+  	  
+  	  &:hover {
+	    color: $links_over;
+      }
+	}
 }
 .toolboxList {
 	display: none;
 	overflow: auto;
-}
-.toolboxList li {
-  	background-color:rgba(0,0,0,0);
-  	color: #ccc;
-  	margin: 0 0 1px 0;
-  	padding: 0.25em 1.5em 0.25em 0.25em;
-  	font-family: "aviano-sans",sans-serif;
-  	font-weight: 700;
-  	font-size: 0.8em;
-  	text-transform: uppercase;
-  	letter-spacing: 0.15em;
-  	line-height: 2em;
-  	text-align: right;
-  	cursor: pointer;
-  	list-style: none;
-}
-.toolboxList li:hover {
-	background-color:rgba(0,0,0,0.2);
-}
-.shadow {
-	-moz-box-shadow: 2px 2px 2px 6px rgba(0,0,0,0.3);
-	-webkit-box-shadow: 2px 2px 2px 6px rgba(0,0,0,0.3);
-	box-shadow: 2px 2px 2px 6px rgba(0,0,0,0.3);
-	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#111111')";
+	
+	ul {
+	  margin: 0.5em 0 0 0;
+	  padding: 0;
+	}
+	
+	li{
+	  background-color:rgba(0,0,0,0);
+  	  color: #ccc;
+  	  margin: 0;
+  	  padding: 0.25em 1.5em 0.25em 0.25em;
+  	  cursor: pointer;
+  	  list-style: none;
+  	  text-align: right;
+  	  
+  	  @include rollovers(all, 0.3s, ease-out);
+  	  
+  	  &:hover {
+	    background-color:rgba(0,0,0,0.2);
+      }
+    }
+    
+	a {
+	  color: $links;
+	  text-decoration: none;
+	  font-family: "aviano-sans",sans-serif;
+  	  font-weight: 300;
+  	  font-size: 0.8em;
+  	  text-transform: uppercase;
+  	  letter-spacing: 0.15em;
+  	  line-height: 2em;
+  	  
+  	  @include rollovers(all, 0.3s, ease-out);
+  	  
+  	  &:hover {
+	    color: $links_over;
+      }
+	}
 }
 .mobile-search {
 	display:none;
@@ -481,20 +533,23 @@ html .clearfix {
 }
 .input input, .input textarea, .input select {
   position: relative;
-  margin: 0;
+  margin: 0 0 0 0.5em;
   border-width: 0;
   padding: 6px;
   background: transparent;
   font: inherit;
+  width: 95%;
 }
 .searchinput {
   font-family: "museo-sans",sans-serif;
   font-weight: 500;
   font-size: 0.75em;
-  line-height: 1.75em;
-  box-shadow: 2px 2px 2px #444 inset;
-  -webkit-box-shadow: 2px 2px 2px #444 inset;
+  line-height: 1.25em;
   width: 90%;
+  margin: 1.2em 0 0 0;
+  padding: 0.5em 0 0 0;
+  -webkit-border-radius: $radius_input;
+  border-radius: $radius_input;
 }
 
 
@@ -566,14 +621,14 @@ html .clearfix {
   height: 100%;
   box-sizing:border-box;
   -moz-box-sizing:border-box;
-  background: $tile_label_btn;
+  background: $tile_label_icon_bkg;
   
   .tile_icon{
     color: $tile_label_icon;
     display: block;
     float: left;
-    font-size: 1.25em;
-    padding: 0.35em 0.35em 0 0.45em;
+    font-size: 1em;
+    padding: 0.6em 0.35em 0 0.6em;
     height: 100%;
     
     @include rollovers(all, 0.3s, ease-out);
@@ -590,8 +645,8 @@ html .clearfix {
   height:0;
   line-height:0;
   border:0.5em solid transparent;
-  border-left:0.5em solid $tile_label_btn;
-  left: 12%;
+  border-left:0.5em solid $tile_label_icon_bkg;
+  left: 11%;
   top: 0.75em;
 }
 .tile_label_txt {
@@ -603,10 +658,10 @@ html .clearfix {
   width: 73%;
   height: 100%;
   margin: 0;
-  padding: 0.75em 0 0 0.85em;
+  padding: 0.75em 0 0 1em;
   font-family: "aviano-sans",sans-serif;
   font-weight: 300;
-  font-size: 0.85em;
+  font-size: 0.8em;
   line-height: 1.2em;
   text-align: left;
   white-space: nowrap;
@@ -622,8 +677,8 @@ html .clearfix {
     
   .icomoon {
     color: $tile_label_info;
-    font-size: 1.5em;
-    padding: 0.3em 0 0 0.5em;
+    font-size: 1.25em;
+    padding: 0.5em 0 0 0.65em;
     margin: 0;
     
     @include rollovers(all, 0.3s, ease-out);
@@ -640,58 +695,6 @@ html .clearfix {
 	font-size: 1.5em;
 	color: #444;
 }
-
-
-
-/*
-
-
-canvas {}
-// Media
-audio {}
-video {}
-source {}
-embed {}
-track {}
-
-// Forms
-datalist {}
-keygen {}
-output {}
-
-// Semantic/Structural Elements
-article {}
-aside {}
-bdi {}
-command {}
-details {}
-dialog {}
-summary {}
-figure {}
-figcaption {}
-footer {}
-header {}
-mark {}
-meter {}
-nav {}
-progress {}
-ruby {}
-rt {}
-rp {}
-section {}
-time {}
-wbr {}
-
-
-*/
-
-
-
-
-
-
-
-
 
 
 

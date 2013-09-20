@@ -2,12 +2,17 @@
 // Variables
 ////////////////////////
 
-$bkg_pattern: url('../images/grid_light.png');
+$bkg_pattern_01: url('../images/textures/grid_light.png');
+$bkg_pattern_02: url('../images/textures/grid_dark.png');
+
+$links: #7fb5e5;
+$links_over: #fff;
 
 $header_bkg: #444;
 $header_over: #ccc;
 
 $radius: 0.35em;
+$radius_input: 0.5em;
 
 $icon: #aaa;
 $icon_bkg: #fff;
@@ -19,9 +24,9 @@ $socnet_over: #999;
 
 $tile_label_bkg: #333;
 $tile_label_txt: #ddd;
-$tile_label_icon: #444;
-$tile_label_icon_over: #111;
-$tile_label_btn: #bbb;
+$tile_label_icon: #555;
+$tile_label_icon_over: #000;
+$tile_label_icon_bkg: #aaa;
 $tile_label_info: #666;
 $tile_label_info_over: #ccc;
 

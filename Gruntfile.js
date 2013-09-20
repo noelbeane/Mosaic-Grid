@@ -83,8 +83,18 @@ module.exports = function(grunt) {
       },
       options: {
         livereload: 8000
-      },
-    }
+      }
+    },
+    copy: {
+	      main: {
+		      files: [
+		      	{expand: true, cwd: 'css/', src: ['**'], dest: '.www/css/'},
+		      	{expand: true, src: ['js/*'], dest: '.www/', filter: 'isFile'},
+		      	{expand: true, cwd: 'images/', src: ['**'], dest: '.www/images/'},
+		      	{expand: true, cwd: 'components/', src: ['**'], dest: '.www/components/'}
+		      ]
+	      }
+      }
   });
 
 
@@ -100,11 +110,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-open');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   
   
 ////////////////////////////////////
 ///////  TASKS
 ///////////////////////////////////
-  grunt.registerTask('default', ['connect', 'jshint', 'concat', 'watch', /*'qunit',*/ 'uglify', 'sass', 'open']);
+  grunt.registerTask('default', ['connect', 'jshint', 'concat', 'watch', /*'qunit',*/ 'uglify', 'sass', 'open', 'copy']);
 
 };
