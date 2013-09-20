@@ -2,7 +2,9 @@
   "author": "Noel Beane",
   "name": "mosaicgrid",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "grunt-open": "~0.2.2"
+  },
   "devDependencies": {
     "grunt": "~0.4.0",
     "grunt-contrib-watch": "~0.5.3",

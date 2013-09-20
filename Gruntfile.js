@@ -1,22 +1,32 @@
+'use strict';
+
 module.exports = function(grunt) {
 
  
 ////////////////////////////////////
 ///////  PROJECT CONFIG
 ///////////////////////////////////
-
+  
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     
     //qunit: {
       //all: ['**/*.html']
     //},
-    connect: {
+    /*connect: {
       server: {
         options: {
-          //port: 9001,
-          //base: 'www-root'
+          port: 8000,
+          hostname: 'localhost'
         }
+      }
+    },*/
+    open: {
+      /*server: {
+        path: 'http://localhost:<%= connect.server.options.port %>'
+      }*/
+      file: {
+	    path: '.www/index.html'
       }
     },
     jshint: {
@@ -70,7 +80,10 @@ module.exports = function(grunt) {
       css: {
 	      files: ['sass/*.scss'],
 	      tasks: ['sass'],
-      }
+      },
+      options: {
+        livereload: 8000
+      },
     }
   });
 
@@ -86,11 +99,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-open');
   
   
 ////////////////////////////////////
 ///////  TASKS
 ///////////////////////////////////
-  grunt.registerTask('default', ['connect', 'jshint', 'concat', 'watch', /*'qunit',*/ 'uglify', 'sass']);
+  grunt.registerTask('default', ['connect', 'jshint', 'concat', 'watch', /*'qunit',*/ 'uglify', 'sass', 'open']);
 
 };

@@ -1,9 +1,10 @@
 /* Mosaic Grid Core */
 body {
+  background-image: url("../images/grid_light.png");
   margin: 0; }
 
 p {
-  color: #ddd;
+  color: #000;
   font-family: "museo-sans",sans-serif;
   font-weight: 300;
   font-size: 1em;
