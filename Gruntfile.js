@@ -10,23 +10,14 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     
-    //qunit: {
-      //all: ['**/*.html']
-    //},
-    /*connect: {
+    connect: {
       server: {
         options: {
-          port: 8000,
-          hostname: 'localhost'
+          port: 9001,
+          base: '.www',
+          hostname: 'localhost',
+          open: true
         }
-      }
-    },*/
-    open: {
-      /*server: {
-        path: 'http://localhost:<%= connect.server.options.port %>'
-      }*/
-      file: {
-	    path: '.www/index.html'
       }
     },
     jshint: {
@@ -104,18 +95,16 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  //grunt.loadNpmTasks('grunt-contrib-qunit');
+  //grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-open');
   grunt.loadNpmTasks('grunt-contrib-copy');
   
   
 ////////////////////////////////////
 ///////  TASKS
 ///////////////////////////////////
-  grunt.registerTask('default', ['connect', 'jshint', 'concat', 'watch', /*'qunit',*/ 'uglify', 'sass', 'open', 'copy']);
+  grunt.registerTask('default', ['connect', /*'jshint',*/ 'concat', 'watch', 'uglify', 'sass', 'copy']);
 
 };
