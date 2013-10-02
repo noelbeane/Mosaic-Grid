@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>MOSAIC GRID</title>
+  
+  <script type="text/javascript" src="components/jquery/jquery.js"></script>
+  <script type="text/javascript" src="components/modernizr/modernizr.js"></script>
+  <script type="text/javascript" src="components/jquery-ui/ui/jquery-ui.js"></script>
+  <script type="text/javascript" src="components/masonry/masonry.js"></script>
+  <script type="text/javascript" src="js/mosaicgrid.js"></script>
+  
+  <link type="text/css" rel="stylesheet" href="css/global.css">
+  
+</head>
+<body onload="init()">
+  
+  <div class="row clearfix" id="page">
+	<div class="page-wrapper">
+	
+<!-- //////////////////////////  HEADER ROW  ////////////////////////////// -->
+		<div class="row clearfix" id="row_header">
+			<div class="rail">&nbsp;</div>
+			<div class="header-wrapper">
+				<header>
+					<div class="sitelogo-wrapper" id="sitelogo">
+						<div class="sitelogo"><img src="images/mosaicgrid_logo.svg" alt="" class="sitelogoImg"></div>
+						<div class="menubtn-wrapper" id="sitemenuBtn" onclick="topnavSlide('menu');">
+						  <div class="icon-menu icomoon"></div>
+						</div>
+					</div>
+					<div class="searchbox-wrapper" id="searchbox">
+						<label class="input searchinput">
+							<span style="color: rgb(153, 153, 153);">Search</span>
+							<input type="text" />
+						</label>
+					</div>
+					<div class="toolbox-wrapper" id="toolbox">
+						<div class="toolboxBtn" id="toolboxBtn" onclick="topnavSlide('tools');">
+							<div class="icon-cog icomoon">
+						</div>
+					</div>
+				</header>
+			</div>
+			<div class="rail">&nbsp;</div>	
+		</div>
+<!-- //////////////////////////////////  MOBILE SEARCH ROW  /////////////////////////////////// -->
+		<div class="mobile-search" id="mobile_search">
+			<div class="mobile-searchbox-wrapper" id="mobile_searchbox">
+				<label class="input searchinput">
+					<span style="color: rgb(153, 153, 153);">Search</span>
+					<input type="text" />
+				</label>
+			</div>
+		</div>
+		
+<!-- ////////////////////////////////////  DROPDOWN ROW  ///////////////////////////////////// -->
+		<div class="row clearfix" id="row_drawer">
+			<div class="rail">&nbsp;</div>
+			<div class="header-wrapper">
+			<div class="drawer-wrapper tranz_norm" id="drawer">
+				<div class="mainnavList" id="mainnav">
+					<ul>
+						<li><a href="">Navigation Item 01</a></li>
+						<li><a href="">Navigation Item 02</a></li>
+						<li><a href="">Navigation Item 03</a></li>
+						<li><a href="">Navigation Item 04</a></li>
+					</ul>				</div>
+				<div class="toolboxList" id="tools">
+					<ul>
+						<li><a href="">Toolbox Item 01</a></li>
+						<li><a href="">Toolbox Item 02</a></li>
+						<li><a href="">Toolbox Item 03</a></li>
+						<li><a href="">Toolbox Item 04</a></li>
+					</ul>
+				</div>
+			</div>
+			</div>
+			<div class="rail">&nbsp;</div>
+		</div>
+		
+<!-- ////////////////////////////////////  MAIN CONTENT ROW  //////////////////////////////////// -->
+		<div class="row clearfix" id="row_main_content">
+			<div class="subnav_wrapper tranz_norm" id="subnav" onclick="subnavSlide();">
+				<div class="subnavBtn" id="subnavBtn"><div class="icon-tag icomoon"></div></div>
+				<div class="subnavList tranz_fast" id="subnavList">
+					<ul>
+						<li>Tag Lorem Ipsum 01</li>
+						<li>Tag Lorem Ipsum 02</li>
+						<li>Tag Lorem Ipsum 03</li>
+					</ul>
+				</div>				
+			</div>
+			<div class="socnet_wrapper" id="socnet">
+				<ul>
+					<li><div class="icoframe"><div class="icon-facebook icomoon"></div></li>		
+					<li><div class="icoframe"><div class="icon-twitter icomoon"></div></li>
+					<li><div class="icoframe"><div class="icon-instagram icomoon"></div></li>
+					<li><div class="icoframe"><div class="icon-vimeo icomoon"></div></li>
+					<li><div class="icoframe"><div class="icon-github icomoon"></div></li>
+				</ul>
+			</div>
+			<div class="main_content_wrapper tranz_norm" id="mainContent">
+			<!--  //////////////////////// START MOSAIC GRID ///////////////////////// -->
+			<div class="mosaic_container">
+			  <div class="masonry js-masonry mosaic_container" id='mosaic' data-masonry-options='{ "columnWidth": 10, "itemSelector": ".msnry_item" "gutter": 20, "isFitWidth": true, "isOriginLeft": true, "isOriginTop": true, "transitionDuration": "0.4s" }'></div>			  
+			  </div>
+		    </div>
+			<!--  //////////////////////// END MOSAIC GRID ///////////////////////// -->			    	  
+	</div>
+</div>
+
+ 
+<footer id="footer">
+  <h2>Mosaic Grid  |  <a href="http://www.beane.biz">www.beane.biz</a></h2>
+</footer>
+  
+  
+<!-- //////////////////////// START LiveReload ///////////////////////// -->
+<script type="text/javascript">document.write('<script src="http://localhost:9001/livereload.js?snipver=1"></' + 'script>')</script>
+<!-- //////////////////////// END LiveReload /////////////////////////// -->
+
+</body>
+</html>
