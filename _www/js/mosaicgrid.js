@@ -1,4 +1,4 @@
-/*! mosaicgrid - v0.0.0 - 2013-10-02 */var subnavState = 0;
+/*! mosaicgrid - v0.0.0 - 2013-10-03 */var subnavState = 0;
 var topnavState = 0;
 var orientation = "portrait";
 var columns = 3;
@@ -46,7 +46,7 @@ function subnavSlide(){
 	  subnav.style.width = "8.33333%";
 	  mainContent.style.width = "83.33333%";
   }
-  $(subnavlist).toggle("slow");
+  $(subnavlist).slideToggle();
 }
 
 function topnavSlide(btn){

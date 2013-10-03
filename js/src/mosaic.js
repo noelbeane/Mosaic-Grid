@@ -46,7 +46,7 @@ function subnavSlide(){
 	  subnav.style.width = "8.33333%";
 	  mainContent.style.width = "83.33333%";
   }
-  $(subnavlist).toggle("slow");
+  $(subnavlist).slideToggle();
 }
 
 function topnavSlide(btn){
