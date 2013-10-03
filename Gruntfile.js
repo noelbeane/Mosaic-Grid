@@ -40,7 +40,7 @@ module.exports = function(grunt) {
       },
       dist: {
         src: ['js/src/**/*.js'],
-        dest: '_www/js/mosaicgrid.js'
+        dest: 'js/mosaicgrid.js'
       }
     },
     uglify: {
@@ -87,7 +87,7 @@ module.exports = function(grunt) {
       },
       scripts: {
         files: 'js/**/*',
-        tasks: ['concat'],
+        tasks: ['concat','copy','uglify'],
         options: {
           spawn: false,
         }
@@ -105,7 +105,7 @@ module.exports = function(grunt) {
 	      main: {
 		      files: [
 		      	//{expand: true, cwd: 'css/', src: ['**'], dest: '_www/css/'},
-		      	//{expand: true, src: ['js/*'], dest: '_www/', filter: 'isFile'},
+		      	{expand: true, src: ['js/*'], dest: '_www/', filter: 'isFile'},
 		      	{expand: true, cwd: 'components/', src: ['**'], dest: '_www/components/'}
 		      ]
 	      }
