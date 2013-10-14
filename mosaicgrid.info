@@ -1,0 +1,25 @@
+
+name = Mosaic Grid
+description = A responsive layout developed with the Masonry JS grid layout library.
+core = 7.x
+
+; CSS
+stylesheets[all][] = css/mosaicgrid.css
+
+
+
+; Regions
+regions[content] = Content
+regions[header] = Header
+regions[help] = Help
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+regions[highlighted] = Highlighted
+
+regions[sidebar_first] = Sidebar first
+regions[sidebar_second] = Sidebar second
+
+regions[social_sandbox] = Social Sandbox
+regions[anchors_subnav] = Anchors Subnav
+regions[footer] = Footer
+
