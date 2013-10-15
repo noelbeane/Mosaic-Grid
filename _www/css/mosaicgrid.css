@@ -82,9 +82,6 @@ article {
 html[xmlns] .clearfix {
   display: block; }
 
-html .clearfix {
-  height: 1%; }
-
 .tranz_norm {
   -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
