@@ -1,10 +1,6 @@
 Mosaic Grid
 ==============
 
-Summary
---------------
-
-# Mosaic Grid
 Mosaic Grid is a responsive theme which surfaces content in a presentation that is easy to scan and digest. The design encourages exploration and engagement by focusing on imagery and directional text. Less clutter and more substance is the core objective. Embracing the latest technologies in CSS3, HTML5, and JQuery, the experience is alive with intuitive interactions that engage and entice a viewer to view more. The theme is designed to surface content in easy to swallow chunks that encourages and enables the audience to explore more. The present and future of online content must embrace a landscape of unlimited devices. From the smallest handheld phone to the largest flat screen television the same content must convey the same message on a variety of viewports. Mosaic Grid offers a more organic and intuitive user experience that is equipped to deliver a clean presentation at any scale.
 
 ### Next-Generation Web Technologies
