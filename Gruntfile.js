@@ -104,8 +104,9 @@ module.exports = function(grunt) {
     copy: {
 	      main: {
 		      files: [
-		      	//{expand: true, cwd: 'css/', src: ['**'], dest: '_www/css/'},
+		      	{expand: true, cwd: '_www/css/', src: ['**'], dest: 'themes/mosaicgrid/css/'},
 		      	{expand: true, src: ['js/*'], dest: '_www/', filter: 'isFile'},
+		      	{expand: true, src: ['js/*'], dest: 'themes/mosaicgrid/', filter: 'isFile'},
 		      	{expand: true, cwd: 'components/', src: ['**'], dest: '_www/components/'}
 		      ]
 	      }
