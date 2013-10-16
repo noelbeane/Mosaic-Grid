@@ -14,7 +14,7 @@ module.exports = function(grunt) {
       server: {
         options: {
           port: 9001,
-          base: 'build',
+          base: '_preview',
           hostname: 'localhost',
           open: true,
           livereload: true
@@ -56,8 +56,8 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         files: {
-          'build/css/mosaicgrid.css': 'sass/mosaicgrid.scss',
-          'build/css/media_queries.css': 'sass/media_queries.scss'
+          '_preview/css/mosaicgrid.css': 'sass/mosaicgrid.scss',
+          '_preview/css/media_queries.css': 'sass/media_queries.scss'
         }
       }
     },
@@ -66,7 +66,7 @@ module.exports = function(grunt) {
         proxy: {
             host: 'localhost',
             port: 9001,
-            base: 'build',
+            base: '_preview',
             files: ['*']
         }
     },
@@ -75,14 +75,14 @@ module.exports = function(grunt) {
         stoponerror: false
       },
       files: {
-        src: ['build/index.html']
+        src: ['_preview/index.html']
       },
     },
     watch: {           
       options: {
         livereload: {
           port: 9001,
-          base: 'build'
+          base: '_preview'
         }
       },
       scripts: {
@@ -97,17 +97,17 @@ module.exports = function(grunt) {
 	    tasks: ['sass']
       },
       html: {
-	    files: ['build/*.html'],
+	    files: ['_preview/*.html'],
 	    tasks: ['reload'/*,'validation'*/]
       }
     },
     copy: {
 	      main: {
 		      files: [
-		      	{expand: true, cwd: 'build/css/', src: ['**'], dest: 'themes/Drupal7/mosaicgrid/css/'},
-		      	{expand: true, src: ['js/*'], dest: 'build/', filter: 'isFile'},
+		      	{expand: true, cwd: '_preview/css/', src: ['**'], dest: 'themes/Drupal7/mosaicgrid/css/'},
+		      	{expand: true, src: ['js/*'], dest: '_preview/', filter: 'isFile'},
 		      	{expand: true, src: ['js/*'], dest: 'themes/Drupal7/mosaicgrid/', filter: 'isFile'},
-		      	{expand: true, cwd: 'components/', src: ['**'], dest: 'build/components/'}
+		      	{expand: true, cwd: 'components/', src: ['**'], dest: '_preview/components/'}
 		      ]
 	      }
       }
