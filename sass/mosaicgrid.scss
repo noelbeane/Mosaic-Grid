@@ -6,87 +6,9 @@
 
 @import "partials/variables";
 
-body {
-  background-image:$bkg_pattern_01;
-  margin: 0; }
+@import "style.scss";
 
-p {
-  color: $body_p;
-  font-family: "museo-sans",sans-serif;
-  font-weight: 300;
-  font-size: 1em;
-  line-height: 1.5em; }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: $body_h;
-  font-family: "aviano-sans",sans-serif;
-  font-weight: 400;
-  font-size: 1.25em;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  line-height: 2em; }
-
-img {
-  border: 0; }
-
-ul ul, ol ul {
-  margin-left: 1em; }
-
-ol {
-  list-style: none;
-  margin-left: 1em; }
-  ul ol {
-    margin-left: 1em; }
-
-header {
-  overflow: hidden;
-  border: 0;
-  background: #444444; }
-
-footer {
-  padding: 1em;
-  clear: both;
-  width: 100%;
-  min-height: 100%;
-  background-image:$bkg_pattern_02;
-  padding: 0.25em 1.5em 2em 1.5em;
-  box-shadow: 0px 2px 2px 0px #222 inset;
-  -webkit-box-shadow: 0px 2px 2px 0px #222 inset; }
-  footer h2 {
-    color: #999;
-    font-family: "aviano-sans",sans-serif;
-    font-weight: 300;
-    font-size: 0.7em;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    line-height: 2em;
-    text-align: center; }
-    footer h2 a {
-      color: #7fb5e5;
-      text-decoration: none; }
-      footer h2 a:hover {
-        color: #7fb5e5; }
-
-article {
-  padding: 1em;
-  margin: 0; }
-
-.clearfix {
-  display: inline-block; }
-  .clearfix:after {
-    display: block;
-    clear: both; }
-
-html[xmlns] .clearfix {
-  display: block; }
-
-//html .clearfix {
-  //height: 1%; }
+@import "drupal.scss";
 
 .tranz_norm {
   -webkit-transition: all 0.3s ease-out;

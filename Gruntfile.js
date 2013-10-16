@@ -14,7 +14,7 @@ module.exports = function(grunt) {
       server: {
         options: {
           port: 9001,
-          base: '_www',
+          base: 'build',
           hostname: 'localhost',
           open: true,
           livereload: true
@@ -56,8 +56,8 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         files: {
-          '_www/css/mosaicgrid.css': 'sass/mosaicgrid.scss',
-          '_www/css/media_queries.css': 'sass/media_queries.scss'
+          'build/css/mosaicgrid.css': 'sass/mosaicgrid.scss',
+          'build/css/media_queries.css': 'sass/media_queries.scss'
         }
       }
     },
@@ -66,7 +66,7 @@ module.exports = function(grunt) {
         proxy: {
             host: 'localhost',
             port: 9001,
-            base: '_www',
+            base: 'build',
             files: ['*']
         }
     },
@@ -75,14 +75,14 @@ module.exports = function(grunt) {
         stoponerror: false
       },
       files: {
-        src: ['_www/index.html']
+        src: ['build/index.html']
       },
     },
     watch: {           
       options: {
         livereload: {
           port: 9001,
-          base: '_www'
+          base: 'build'
         }
       },
       scripts: {
@@ -97,17 +97,17 @@ module.exports = function(grunt) {
 	    tasks: ['sass']
       },
       html: {
-	    files: ['_www/*.html'],
+	    files: ['build/*.html'],
 	    tasks: ['reload'/*,'validation'*/]
       }
     },
     copy: {
 	      main: {
 		      files: [
-		      	{expand: true, cwd: '_www/css/', src: ['**'], dest: 'themes/mosaicgrid/css/'},
-		      	{expand: true, src: ['js/*'], dest: '_www/', filter: 'isFile'},
-		      	{expand: true, src: ['js/*'], dest: 'themes/mosaicgrid/', filter: 'isFile'},
-		      	{expand: true, cwd: 'components/', src: ['**'], dest: '_www/components/'}
+		      	{expand: true, cwd: 'build/css/', src: ['**'], dest: 'themes/Drupal7/mosaicgrid/css/'},
+		      	{expand: true, src: ['js/*'], dest: 'build/', filter: 'isFile'},
+		      	{expand: true, src: ['js/*'], dest: 'themes/Drupal7/mosaicgrid/', filter: 'isFile'},
+		      	{expand: true, cwd: 'components/', src: ['**'], dest: 'build/components/'}
 		      ]
 	      }
       }
