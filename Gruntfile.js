@@ -57,7 +57,8 @@ module.exports = function(grunt) {
       dist: {
         files: {
           '_preview/css/mosaicgrid.css': 'sass/mosaicgrid.scss',
-          '_preview/css/media_queries.css': 'sass/media_queries.scss'
+          '_preview/css/media_queries.css': 'sass/media_queries.scss',
+          '_preview/css/style.css': 'sass/style.scss'
         }
       }
     },
@@ -104,9 +105,7 @@ module.exports = function(grunt) {
     copy: {
 	      main: {
 		      files: [
-		      	{expand: true, cwd: '_preview/css/', src: ['**'], dest: 'themes/Drupal7/mosaicgrid/css/'},
 		      	{expand: true, src: ['js/*'], dest: '_preview/', filter: 'isFile'},
-		      	{expand: true, src: ['js/*'], dest: 'themes/Drupal7/mosaicgrid/', filter: 'isFile'},
 		      	{expand: true, cwd: 'components/', src: ['**'], dest: '_preview/components/'}
 		      ]
 	      }
