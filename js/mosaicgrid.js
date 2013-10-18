@@ -1,4 +1,4 @@
-/*! mosaicgrid - v0.0.0 - 2013-10-16 */var subnavState = 0;
+/*! mosaicgrid - v0.0.0 - 2013-10-17 */var subnavState = 0;
 var topnavState = 0;
 var orientation = "portrait";
 var columns = 3;
