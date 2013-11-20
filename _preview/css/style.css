@@ -1,18 +1,17 @@
 body {
-  word-wrap: break-word;
   margin: 0;
   padding: 0;
   border: 0;
   outline: 0;
-  background-image: url("../images/textures/grid_light.png"); }
+  overflow-x: hidden;
+  animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  -webkit-animation: fadein 2s;
+  -o-animation: fadein 2s;
+  background-image: url("../images/textures/grid_light.png");
+  font-family: Arial, Helvetica, sans-serif; }
 
-a:link,
-a:visited {
-  text-decoration: none; }
-
-a:hover,
-a:active,
-a:focus {
+a {
   text-decoration: none; }
 
 h1,
@@ -22,9 +21,6 @@ h4,
 h5,
 h6 {
   margin: 1.0em 0 0.5em;
-  font-weight: inherit;
-  color: #666666;
-  font-family: "aviano-sans",sans-serif;
   font-weight: 400;
   font-size: 1.25em;
   letter-spacing: 0.05em;
@@ -32,16 +28,12 @@ h6 {
 
 p {
   color: #dddddd;
-  font-family: "museo-sans",sans-serif;
   font-weight: 300;
   font-size: 1em;
   line-height: 1.5em; }
 
 del {
   text-decoration: line-through; }
-
-tr.odd {
-  background-color: #dddddd; }
 
 img {
   outline: 0;
@@ -57,21 +49,18 @@ ol {
 header {
   overflow: hidden;
   border: 0;
-  background: #444444; }
+  margin: 0;
+  padding: 0; }
 
 footer {
-  padding: 1em;
   clear: both;
   width: 100%;
   min-height: 100%;
-  background-image: url("../images/textures/grid_dark.png");
   padding: 0.25em 1.5em 2em 1.5em;
-  box-shadow: 0px 2px 2px 0px #222 inset;
-  -webkit-box-shadow: 0px 2px 2px 0px #222 inset; }
+  box-shadow: 0px 2px 2px 0px #000 inset;
+  -webkit-box-shadow: 0px 2px 2px 0px #000 inset; }
 
 footer h2 {
-  color: #999;
-  font-family: "aviano-sans",sans-serif;
   font-weight: 300;
   font-size: 0.7em;
   text-transform: uppercase;
@@ -80,25 +69,27 @@ footer h2 {
   text-align: center; }
 
 footer h2 a {
+  text-decoration: none; }
+
+#footer-wrapper p {
+  font-family: arial,sans-serif;
+  font-weight: 300;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  line-height: 2em;
+  text-align: center; }
+
+#footer-wrapper p a {
   color: #7fb5e5;
   text-decoration: none; }
 
-footer h2 a:hover {
-  color: #7fb5e5; }
+#footer-wrapper p a:hover {
+  color: #fff; }
 
 article {
   padding: 1em;
   margin: 0; }
-
-.clearfix {
-  display: inline-block; }
-
-.clearfix:after {
-  display: block;
-  clear: both; }
-
-html[xmlns] .clearfix {
-  display: block; }
 
 code,
 pre,
@@ -106,11 +97,10 @@ kbd,
 samp,
 var {
   padding: 0 0.4em;
-  font-size: 0.77em;
-  font-family: "museo-sans",sans-serif; }
+  font-size: 0.77em; }
 
 code {
-  background-color: #f2f2f2;
+  /*background-color: #f2f2f2;*/
   background-color: rgba(40, 40, 0, 0.06); }
 
 pre code,
@@ -144,40 +134,11 @@ kbd {
   border-radius: 5px; }
 
 pre {
-  background-color: #f2f2f2;
   background-color: rgba(40, 40, 0, 0.06);
   margin: 10px 0;
   overflow: hidden;
   padding: 15px;
   white-space: pre-wrap; }
-
-/* ------------------ Fonts ------------------ */
-body,
-#site-slogan,
-.ui-widget,
-.comment-form label {
-  font-family: "museo-sans",sans-serif; }
-
-#header,
-#footer-wrapper,
-#skip-link,
-ul.contextual-links,
-ul.links,
-ul.primary,
-.item-list .pager,
-div.field-type-taxonomy-term-reference,
-div.messages,
-div.meta,
-p.comment-time,
-table,
-.breadcrumb {
-  font-family: "museo-sans",sans-serif; }
-
-input,
-textarea,
-select,
-a.button {
-  font-family: "museo-sans",sans-serif; }
 
 /* ------------------ Reset Styles ------------------ */
 caption {
@@ -229,7 +190,6 @@ table table {
   font-size: 1em; }
 
 table tr th {
-  background: #757575;
   background: rgba(0, 0, 0, 0.51);
   border-bottom-style: none; }
 
@@ -248,11 +208,6 @@ tr th {
   border: 1px solid #fff;
   text-align: left;
   /* LTR */ }
-
-#footer-wrapper tr td,
-#footer-wrapper tr th {
-  border-color: #555;
-  border-color: rgba(255, 255, 255, 0.18); }
 
 tr.odd {
   background: #e4e4e4;
@@ -307,3 +262,31 @@ ul.menu li {
 ul.tips {
   padding: 0 0 0 1.25em;
   /* LTR */ }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
+@-moz-keyframes fadein {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
+@-o-keyframes fadein {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }

@@ -58,7 +58,8 @@ module.exports = function(grunt) {
         files: {
           '_preview/css/mosaicgrid.css': 'sass/mosaicgrid.scss',
           '_preview/css/media_queries.css': 'sass/media_queries.scss',
-          '_preview/css/style.css': 'sass/style.scss'
+          '_preview/css/style.css': 'sass/style.scss',
+          '_preview/css/colors.css': 'sass/colors.scss'
         }
       }
     },

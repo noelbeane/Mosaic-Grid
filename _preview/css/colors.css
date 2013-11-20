@@ -1,0 +1,184 @@
+/* ---------- Colors ----------- */
+body {
+  background: #fff; }
+
+body.overlay {
+  color: #3b3b3b; }
+
+.comment .comment-arrow {
+  border-color: #ffffff; }
+
+#page,
+#main-wrapper,
+#main-menu-links li a.active,
+#main-menu-links li.active-trail a {
+  /*background: #cccccc;*/ }
+
+#main-wrapper {
+  background-image: url("../../images/textures/grid_light.png"); }
+
+.tabs ul.primary li a.active {
+  background-color: #ffffff; }
+
+.tabs ul.primary li.active a {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ffffff; }
+
+a {
+  color: #0071B3; }
+
+a:hover,
+a:focus {
+  color: #018fe2; }
+
+a:active {
+  color: #23aeff; }
+
+.sidebar .block {
+  background-color: #f6f6f2;
+  border-color: #f9f9f9; }
+
+.region-header,
+.region-header a,
+.region-header li a.active,
+#name-and-slogan,
+#name-and-slogan a,
+#secondary-menu-links li a {
+  color: #fffeff; }
+
+footer {
+  /*background: #555;*/
+  background-image: url("../../images/textures/grid_dark.png"); }
+
+footer h2 {
+  color: #999; }
+
+footer h2 a {
+  color: #7fb5e5; }
+
+footer h2 a:hover {
+  color: #fff; }
+
+#footer-wrapper p {
+  color: #999; }
+
+#footer-wrapper p a {
+  color: #7fb5e5; }
+
+#footer-wrapper p a:hover {
+  color: #fff; }
+
+.drawer-wrapper {
+  background-image: url("../../images/textures/grid_dark.png");
+  /*background: #555;*/ }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #666666; }
+
+p {
+  color: #dddddd; }
+
+tr.odd {
+  background-color: #dddddd; }
+
+header {
+  background: #333333; }
+
+code {
+  background-color: #f2f2f2; }
+
+pre {
+  background-color: #f2f2f2; }
+
+blockquote {
+  background: #f7f7f7; }
+
+blockquote:before {
+  color: #bbb; }
+
+blockquote:after {
+  color: #bbb; }
+
+table tr th {
+  background: #757575; }
+
+tr.odd {
+  background: #e4e4e4; }
+
+tr,
+tr.even {
+  background: #efefef; }
+
+.features h1 {
+  color: #ffe074; }
+
+.features p {
+  color: white; }
+
+.subnav_wrapper .icomoon {
+  color: white; }
+
+.subnavList li {
+  background: #f77255; }
+
+.subnavList li:hover {
+  background: #e45f42; }
+
+.subnav_wrapper .icomoon:hover {
+  color: #f7aa9a; }
+
+.subnav_wrapper {
+  border: 1px solid #ccc;
+  background: #f77255; }
+
+.socnet_wrapper .icoframe {
+  border: 1px solid #ccc;
+  background: #f77255; }
+
+.socnet_wrapper .icomoon {
+  color: white; }
+
+.socnet_wrapper .icomoon:hover {
+  color: #f7aa9a; }
+
+.toolbox_wrapper .icomoon {
+  color: #999; }
+
+.toolbox_wrapper .icomoon:hover {
+  color: #555; }
+
+.menubtn_wrapper .icomoon {
+  color: #999; }
+
+.menubtn_wrapper .icomoon:hover {
+  color: #555; }
+
+.tile-desc {
+  background: #ededed; }
+
+.tile_icon_wrapper {
+  background: #555; }
+
+.tile_icon_wrapper .tile_icon {
+  color: white; }
+
+.tile_label_txt {
+  color: #777777; }
+
+.header-wrapper .icoframe {
+  border: 0;
+  background: #666; }
+
+.header-wrapper .icomoon {
+  color: #ccc; }
+
+.mobile_search {
+  background: #999; }
+
+.searchinput {
+  color: #999; }
