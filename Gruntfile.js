@@ -17,30 +17,8 @@ module.exports = function(grunt) {
           base: '_preview',
           hostname: 'localhost',
           open: true,
-          livereload: true
+          livereload: 8001
         }
-      }
-    },
-    /*jshint: {
-      all: ['js/**'],
-      options: {
-        globals: {
-          jQuery: true,
-          console: true,
-          module: true,
-          document: true
-        }
-      }
-    },*/
-    concat: {
-      options: {
-        stripBanners: true,
-        banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
-        '<%= grunt.template.today("yyyy-mm-dd") %> */'
-      },
-      dist: {
-        src: ['js/src/**/*.js'],
-        dest: 'js/mosaicgrid.js'
       }
     },
     uglify: {
@@ -49,7 +27,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'js/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
+          'js/<%= pkg.name %>.min.js': ['js/<%= pkg.name %>.js']
         }
       }
     },
@@ -63,35 +41,24 @@ module.exports = function(grunt) {
         }
       }
     },
-    reload: {
-        port: 9001,
-        proxy: {
-            host: 'localhost',
-            port: 9001,
-            base: '_preview',
-            files: ['*']
-        }
-    },
     validation: {
       options: {
-        stoponerror: false
+        stoponerror: false,
+        reset: true
       },
       files: {
-        src: ['_preview/index.html']
-      },
+        src: ['_preview/*.html']
+      }
     },
     watch: {           
       options: {
-        livereload: {
-          port: 9001,
-          base: '_preview'
-        }
+         livereload: 8001
       },
       scripts: {
-        files: 'js/**/*',
-        tasks: ['concat','copy','uglify'],
+        files: 'js/<%= pkg.name %>.js',
+        tasks: ['uglify','copy'],
         options: {
-          spawn: false,
+          spawn: false
         }
       },
       css: {
@@ -100,7 +67,7 @@ module.exports = function(grunt) {
       },
       html: {
 	    files: ['_preview/*.html'],
-	    tasks: ['reload'/*,'validation'*/]
+	    tasks: []
       }
     },
     copy: {
@@ -120,18 +87,14 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  //grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-reload');
   grunt.loadNpmTasks('grunt-html-validation');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  
   
 ////////////////////////////////////
 ///////  TASKS
 ///////////////////////////////////
-  grunt.registerTask('default', ['connect', 'concat', 'watch', 'uglify', 'sass', 'copy', 'validation', 'reload'/*,'jshint'*/ ]);
+  grunt.registerTask('default', ['connect', 'watch', 'uglify', 'sass', 'copy', 'validation']);
 
 };

@@ -1,4 +1,4 @@
-/*! mosaicgrid - v0.0.0 - 2013-11-16 *//*! mosaicgrid - v0.0.0 - 2013-10-15 */
+/*! mosaicgrid - v0.0.0 - 2013-10-15 */
 
 var subnavState = 0;
 var topnavState = 0;
@@ -17,7 +17,6 @@ function init(url){
 	  loadJSON(url);
 	}
 	footer();
-	
 }
 
 $(window).resize(function() {

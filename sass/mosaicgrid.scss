@@ -27,10 +27,12 @@
 #main {
   padding-bottom: 4em;
 }
+
 #mainContent {
   overflow-y:hidden;
   overflow-x:hidden;
 }
+
 .demo_message{
  width: 80%;
  font-size: 1em;
@@ -40,19 +42,23 @@
  margin-right: auto;
  margin-bottom: 1em;
  text-align: center;
+
+ a {
+   font-weight: 500;
+ }
 }
-.demo_message a {
- font-weight: 500;
-}
+
 .preloader {
   background-repeat: no-repeat;
 }
+
 .icomoon {
   color: #aaaaaa;
   font-size: 1.35em;
   padding: 0.25em 0 0 0;
   cursor: pointer;
 }
+
 .icoframe {
   border: 2px solid #FFF;
   background: white;
@@ -63,33 +69,9 @@
   width: 2em;
   text-align: center;
   -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.05);
-  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.05); }
-
-.menubtn_wrapper .icomoon {
-  font-size: 1.75em;
-  cursor: pointer;
-  padding: 0;
-  margin: 0.5em 0 0 0; 
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.05); 
 }
 
-.menubtn_wrapper .icomoon:hover {
-  color: #666666; }
-  
-.header-wrapper {
-  width: 100%;
-  overflow: hidden;
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.sitelogo_wrapper {
-  display: inline-block;
-  box-sizing:padding-box;
-  float: left;
-  padding: 0;
-  height: 3.5em;
-}
 .menubtn_wrapper {
   display: inline-block;
   box-sizing:border-box;
@@ -100,7 +82,27 @@
   height: 3.5em;
   text-align: center;
   cursor: pointer;
+  
+  .icomoon {
+    font-size: 1.75em;
+    cursor: pointer;
+    padding: 0;
+    margin: 0.5em 0 0 0; 
+  }
+  
+  .icomoon:hover {
+    color: #666666; 
+  }
 }
+
+.sitelogo_wrapper {
+  display: inline-block;
+  box-sizing:padding-box;
+  float: left;
+  padding: 0;
+  height: 3.5em;
+}
+
 .searchbox_wrapper {
   box-sizing:border-box;
   float: left;
@@ -108,7 +110,8 @@
   margin: 0;
   width: 40%;
   height: 3.5em;
-  text-align: center; }
+  text-align: center; 
+}
 
 .toolbox_wrapper {
   display: inline-block;
@@ -134,16 +137,6 @@
     text-transform: uppercase;
   } 
 }
-
-.sitelogoImg {
-  width: inherit;
-  height: auto; }
-
-.rail {
-  width: 0%; }
-
-.xtra_padding {
-  margin: 0.5em 0 0 0; }
 
 #page-wrapper {
   overflow-y: hidden;

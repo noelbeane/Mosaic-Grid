@@ -59,17 +59,15 @@ footer {
   padding: 0.25em 1.5em 2em 1.5em;
   box-shadow: 0px 2px 2px 0px #000 inset;
   -webkit-box-shadow: 0px 2px 2px 0px #000 inset; }
-
-footer h2 {
-  font-weight: 300;
-  font-size: 0.7em;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  line-height: 2em;
-  text-align: center; }
-
-footer h2 a {
-  text-decoration: none; }
+  footer h2 {
+    font-weight: 300;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    line-height: 2em;
+    text-align: center; }
+    footer h2 a {
+      text-decoration: none; }
 
 #footer-wrapper p {
   font-family: arial,sans-serif;
@@ -79,13 +77,11 @@ footer h2 a {
   letter-spacing: 0.15em;
   line-height: 2em;
   text-align: center; }
-
-#footer-wrapper p a {
-  color: #7fb5e5;
-  text-decoration: none; }
-
-#footer-wrapper p a:hover {
-  color: #fff; }
+  #footer-wrapper p p a {
+    color: #7fb5e5;
+    text-decoration: none; }
+  #footer-wrapper p p a:hover {
+    color: #fff; }
 
 article {
   padding: 1em;
@@ -100,7 +96,6 @@ var {
   font-size: 0.77em; }
 
 code {
-  /*background-color: #f2f2f2;*/
   background-color: rgba(40, 40, 0, 0.06); }
 
 pre code,
