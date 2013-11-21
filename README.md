@@ -1,15 +1,11 @@
 Mosaic Grid
 ==============
 
-Mosaic Grid is a responsive theme designed to surface content in easy to swallow chunks that encourage further exploration with less clutter and more substance. The main content area utilizes the Masonry cascading grid layout library. This Javascript library places elements in optimal position based on available vertical space. From the smallest handheld device to the largest flat screen Mosaic Grid offers a clean presentation at any scale.
+Mosaic Grid is a responsive theme designed to surface content in easy to swallow chunks that encourage further exploration with less clutter and more substance. The main content area utilizes the **Masonry** cascading grid layout library. This Javascript library places elements in optimal position based on available vertical space. 
 
+From the smallest handheld device to the largest flat screen Mosaic Grid offers a clean presentation at any scale. The default breakpoints are broken into four recognizable sizes (small, medium, large, and x-large), where small represents most handheld devices and large represents your average desktop computer. Feel free to add or remove breakpoints in the **media_queries.scss** file located in the **sass/** folder. This is a good time to discuss the file structure of the download.
 
-### Features
-
-**Responsive Grid System**
-Mosaic Grid is built on a responsive grid system that allows you to adjust your design to fit any device. The default breakpoints are broken into four recognizable sizes (small, medium, large, and x-large), where small represents most handheld devices and large represents your average desktop computer. Feel free to add or remove breakpoints in the **media_queries.scss** file located in the **sass/** folder. This is a good time to discuss the file structure of the download.
-
-**File Structure**
+###File Structure
 * **_preview** – contains a full demo of the theme. Any changes you make will be reflected here.
 * **components** – contains a large number of javascript libraries that are available to enchance your development (JQuery, Masonry, Modernizr, etc.)
 * **js** – contains the core Mosaic Grid package. Any changes to this folder will compile and be reflected in the _preview folder
