@@ -17,7 +17,7 @@ From the smallest handheld device to the largest flat screen Mosaic Grid offers 
 ### Next-Generation Web Technologies
 Mosaic Grid utilizes HTML5, CSS3 and Javascript libraries including JQuery, Modernizr, Masonry and others.
 
-**Grunt** is an automation tool installed and managed via npm, the Node.js package manager that will make your life a hell of a lot easier. With Grunt and its growing number of plugins installed you can automate a variety of tasks that can clean, copy, or validate your JS, SASS, CSS, or HTML files among other things. You will find the download comes packaged with several Grunt plugins that will speed your prototyping and production. [Learn more about Grunt...](http://gruntjs.com/)
+**Grunt** is an automation tool installed and managed via npm, the Node.js package manager that will make your life a hell of a lot easier. With Grunt and its growing number of plugins installed you can automate a variety of tasks that can clean, copy, or validate your JS, SASS, CSS, or HTML files among other things. You will find the download comes packaged with several Grunt plugins that will speed your prototyping and production. [Learn more about Grunt](http://gruntjs.com/)
 
 Tasks included in the download:
 * **connect** - opens a preview in a browser window connected to the localhost port 9001; livereload is enabled, so you may want to be sure you have the latest version installed and running
@@ -29,7 +29,7 @@ Tasks included in the download:
 
 
 
-**Bower** is a package manager for self-contained JavaScript components. The core elements of Mosaic Grid are built with a variety of JS packages. Bower enables us to update and install the latest and greatest packages available on the web. [Learn more about Bower...](http://bower.io/)
+**Bower** is a package manager for self-contained JavaScript components. The core elements of Mosaic Grid are built with a variety of JS packages. Bower enables us to update and install the latest and greatest packages available on the web. [Learn more about Bower](http://bower.io/)
 
 Bower dependencies included in the download:
 * JQuery
@@ -53,4 +53,4 @@ JSON fields defined in the download:
 * **ID** is the unique identifier for each item (not listed in the JSON file, but is an additional field generated from the parse function)  
 
 
-**Sass** is an extension of CSS3, which allows the use of nested rules, variables, mixins, selector inheritance, and much more. The source Sass files included in the download are located in the folder **sass/**. Through the use of the Grunt tasks any updates to the files in this folder or its subfolder **sass/_partials/** will automatically compile to the folder **_preview/css/**. [Learn more about Sass...](http://sass-lang.com/)
+**Sass** is an extension of CSS3, which allows the use of nested rules, variables, mixins, selector inheritance, and much more. The source Sass files included in the download are located in the folder **sass/**. Through the use of the Grunt tasks any updates to the files in this folder or its subfolder **sass/_partials/** will automatically compile to the folder **_preview/css/**. [Learn more about Sass](http://sass-lang.com/)
