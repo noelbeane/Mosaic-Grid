@@ -265,7 +265,7 @@
   padding: 0; }
 
 .mainnavList li {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   margin: 0;
   padding: 0.25em 0.25em 0.25em 1.5em;
   cursor: pointer;
@@ -314,7 +314,7 @@ ul.links li a:hover {
   padding: 0; }
 
 .toolboxList li {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   color: #ccc;
   margin: 0;
   padding: 0.25em 1.5em 0.25em 0.25em;

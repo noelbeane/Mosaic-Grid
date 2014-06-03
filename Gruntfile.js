@@ -17,7 +17,7 @@ module.exports = function(grunt) {
           base: '_preview',
           hostname: 'localhost',
           open: true,
-          livereload: 8001
+          livereload: 9001
         }
       }
     },
