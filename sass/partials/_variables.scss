@@ -2,17 +2,30 @@
 // Variables
 ////////////////////////
 
-$bkg_pattern_01: url('../images/textures/grid_light.png');
-$bkg_pattern_02: url('../images/textures/grid_dark.png');
 
-$body_p: #ddd;
-$body_h: #666;
+//palette vars - ordinal namespace
+$clr-primary: #002b53;
+$clr-secondary: #3f67c0;
+$clr-tertiary: #35b5eb;
+$clr-quarternary: #f78e39;
+$clr-quinary: #fccd5b;
+$clr-senary: #fccd5b;
+$clr-septenary: #fccd5b;
+$clr-octonary: #f35f5e;
+$clr-nonary: #b11c54;
+$clr-denary: #000;
+
+$bkg-pattern-01: url('../images/textures/grid_light.png');
+$bkg-pattern-02: url('../images/textures/grid_dark.png');
+
+$body-p: #ddd;
+$body-h: #666;
 
 $links: #7fb5e5;
-$links_over: #fff;
+$links-over: #fff;
 
-$header_bkg: #444;
-$header_over: #ccc;
+$header-bkg: #444;
+$header-over: #ccc;
 
 $radius: 0.35em;
 $radius_input: 0.5em;
