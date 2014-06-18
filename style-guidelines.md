@@ -1,6 +1,6 @@
 # Style Guidelines
 
-----
+
 ## File Structure
 
 Mosaic Grid uses SMACSS (Scalable and Modular Architecture for CSS) which is a set of CSS guidelines which organizes your CSS rules into reusable modules.
