@@ -8,13 +8,13 @@ see [SMACSS](https://smacss.com)
 
 
 
-1. **Base** - *sass/base.scss*
+* **Base** - *sass/base.scss*
 
  * Include defaults and reset rules
  * Applied with element selector, a descendent selector, or a child selector, along with any pseudo-classes. Do not include any class or ID selectors
 
 
-2. **Layout** - *sass/layout.scss*
+* **Layout** - *sass/layout.scss*
 
  * Layout rules divide pages into sections.
  * Layouts hold one or more modules together
@@ -22,7 +22,7 @@ see [SMACSS](https://smacss.com)
  * Major layout styles such as header and footer are traditionally styled using ID selectors
 
 
-3. **Module** - *sass/module.scss*
+* **Module** - *sass/module.scss*
 
  * Modules are the reusable, modular parts of the design
  * avoid defining modules with IDs or element selectors. stick to class names.
@@ -30,7 +30,7 @@ see [SMACSS](https://smacss.com)
 
 
 
-4. **State** - *sass/state.scss*
+* **State** - *sass/state.scss*
 
  * State rules are ways to describe how our modules or layouts will look when in a particular state. Is it hidden or expanded? Is it active or inactive?They are about describing how a module or layout looks on screens that are smaller or bigger. They are also about describing how a module might look in different views like the home page or inside page.
  * A state is something that augments and overrides all other styles. For example, an accordion section may be in a collapsed or expanded state. A message may be in a success or error state.
@@ -53,7 +53,7 @@ see [SMACSS](https://smacss.com)
 
         $(“.btn”).bind(“Click”, function(){$(this).attr(‘data-state’, ‘pressed’);});
 
-5. **Theme** - *sass/theme.scss*
+* **Theme** - *sass/theme.scss*
 
  * Theme rules are similar to state rules in that they describe how modules or layouts might look. Most sites don’t require a layer of theming but it is good to be aware of it.
  * Theme rules define colors and images that give your application or site its look and feel
