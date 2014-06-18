@@ -7,7 +7,6 @@ Mosaic Grid uses SMACSS (Scalable and Modular Architecture for CSS) which is a s
 see [SMACSS](https://smacss.com)
 
 
-
 * **Base** - *sass/base.scss*
 
  * Include defaults and reset rules
