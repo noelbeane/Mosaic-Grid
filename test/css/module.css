@@ -1,11 +1,3 @@
-////////////////////////////  
-///  MOSAIC GRID SASS  
-////////////////////////////
-
-@import "partials/mixins";
-
-@import "partials/variables";
-
 .tranz_norm {
   -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
@@ -25,39 +17,33 @@
   transition: all 0.1s ease-out; }
 
 #main {
-  padding-bottom: 4em;
-}
+  padding-bottom: 4em; }
 
 #mainContent {
-  overflow-y:hidden;
-  overflow-x:hidden;
-}
+  overflow-y: hidden;
+  overflow-x: hidden; }
 
-.demo_message{
- width: 80%;
- font-size: 1em;
- font-weight: 300;
- color: #666;
- margin-left: auto;
- margin-right: auto;
- margin-bottom: 1em;
- text-align: center;
+.demo_message {
+  width: 80%;
+  font-size: 1em;
+  font-weight: 300;
+  color: #666;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+  text-align: center; }
 
- a {
-   font-weight: 500;
- }
-}
+.demo_message a {
+  font-weight: 500; }
 
 .preloader {
-  background-repeat: no-repeat;
-}
+  background-repeat: no-repeat; }
 
 .icomoon {
   color: #aaaaaa;
   font-size: 1.35em;
   padding: 0.25em 0 0 0;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 .icoframe {
   border: 2px solid #FFF;
@@ -69,74 +55,65 @@
   width: 2em;
   text-align: center;
   -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.05);
-  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.05); 
-}
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.05); }
 
 .menubtn_wrapper {
   display: inline-block;
-  box-sizing:border-box;
+  box-sizing: border-box;
   float: left;
   padding: 0;
   margin: 0 auto 0 auto;
   width: 10%;
   height: 3.5em;
   text-align: center;
+  cursor: pointer; }
+
+.menubtn_wrapper .icomoon {
+  font-size: 1.75em;
   cursor: pointer;
-  
-  .icomoon {
-    font-size: 1.75em;
-    cursor: pointer;
-    padding: 0;
-    margin: 0.5em 0 0 0; 
-  }
-  
-  .icomoon:hover {
-    color: #666666; 
-  }
-}
+  padding: 0;
+  margin: 0.5em 0 0 0; }
+
+.menubtn_wrapper .icomoon:hover {
+  color: #666666; }
 
 .sitelogo_wrapper {
   display: inline-block;
-  box-sizing:padding-box;
+  box-sizing: padding-box;
   float: left;
   padding: 0;
-  height: 3.5em;
-}
+  height: 3.5em; }
 
 .searchbox_wrapper {
-  box-sizing:border-box;
+  box-sizing: border-box;
   float: left;
   padding: 0;
   margin: 0;
   width: 40%;
   height: 3.5em;
-  text-align: center; 
-}
+  text-align: center; }
 
 .toolbox_wrapper {
   display: inline-block;
-  box-sizing:border-box;
+  box-sizing: border-box;
   float: right;
   padding: 0;
   margin: 0;
   width: 10%;
   height: 3.5em;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 .sitelogo {
   display: inline-block;
   float: left;
   margin-left: 3em;
-  padding-top: 0.35em;
-  
-  h1{
-    font-size: 1.15em;
-    margin: 0.25em 0 0 0;
-    color: white;
-    text-transform: uppercase;
-  } 
-}
+  padding-top: 0.35em; }
+
+.sitelogo h1 {
+  font-size: 1.15em;
+  margin: 0.25em 0 0 0;
+  color: white;
+  text-transform: uppercase; }
 
 #page-wrapper {
   overflow-y: hidden;
@@ -155,8 +132,7 @@
   border-radius: 0 0.35em 0.35em 0;
   margin-top: 1em;
   -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.05);
-  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.05);
-}
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.05); }
 
 .subnavBtn {
   display: block;
@@ -220,15 +196,14 @@
   -webkit-margin-start: 0;
   -webkit-margin-end: 0;
   -webkit-padding-start: 0; }
-   
+
 .socnet_wrapper .icomoon {
   cursor: pointer; }
 
 .qlink {
   display: inline-block;
   margin-right: 2em;
-  width: 14em;
-}
+  width: 14em; }
 
 .qlink .icoframe {
   height: 6em;
@@ -236,21 +211,17 @@
   -webkit-border-radius: 6em;
   -moz-border-radius: 6em;
   border-radius: 6em;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
 .qlink .icomoon {
   font-size: 3.75em;
   padding: 0.3em 0 0 0;
   cursor: pointer;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-}
-  
-.qlink p{
-  font-weight: 100;
-  font-size: 0.8em;
-}
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4); }
 
+.qlink p {
+  font-weight: 100;
+  font-size: 0.8em; }
 
 .glyphfont {
   font-size: 2em;
@@ -276,20 +247,18 @@
   margin: 0.5em 3em 0 0;
   cursor: pointer;
   text-align: right; }
-  
-.toolbox_wrapper .icoframe{
+
+.toolbox_wrapper .icoframe {
   -webkit-border-radius: 2em;
   -moz-border-radius: 2em;
   border-radius: 2em;
   height: 2em;
   width: 2em;
-  margin: 0.15em 0 0 1em;
-}
+  margin: 0.15em 0 0 1em; }
 
 .toolbox_wrapper .icomoon {
   font-size: 1.75em;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 .mainnavList {
   display: none;
@@ -300,7 +269,7 @@
   padding: 0; }
 
 .mainnavList li {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   margin: 0;
   padding: 0.25em 0.25em 0.25em 1.5em;
   cursor: pointer;
@@ -333,13 +302,12 @@
 
 .mainnavList a:hover {
   color: white; }
-  
+
 ul.links li a.active {
- color: #7fb5e5;
-}
+  color: #7fb5e5; }
+
 ul.links li a:hover {
- color: #fff;
-}
+  color: #fff; }
 
 .toolboxList {
   display: none;
@@ -350,7 +318,7 @@ ul.links li a:hover {
   padding: 0; }
 
 .toolboxList li {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   color: #ccc;
   margin: 0;
   padding: 0.25em 1.5em 0.25em 0.25em;
@@ -463,8 +431,7 @@ ul.links li a:hover {
 
 .tile-desc {
   display: block;
-  position: absolute;
-}
+  position: absolute; }
 
 .tile-desc p {
   display: block;
@@ -478,19 +445,18 @@ ul.links li a:hover {
 
 .tile-author {
   color: #666;
-  font-weight: 500;
-}
+  font-weight: 500; }
+
 .tile-date {
-  color:#999;
+  color: #999;
   font-weight: 100;
-  font-style: italic;
-}
+  font-style: italic; }
+
 .tile-title {
   color: #333333;
   font-weight: 900;
   font-size: 1.35em;
-  line-height: 0.5em;
-}
+  line-height: 0.5em; }
 
 .tile-label {
   display: block;
@@ -512,8 +478,7 @@ ul.links li a:hover {
   height: 100%;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 .tile_icon_wrapper .tile_icon {
   display: block;
@@ -570,9 +535,3 @@ ul.links li a:hover {
 .filetype-font {
   font-size: 1.5em;
   color: #444; }
-
-
-
-
-
-

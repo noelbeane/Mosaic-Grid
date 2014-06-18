@@ -14,9 +14,9 @@ module.exports = function(grunt) {
       server: {
         options: {
           port: 9001,
-          base: '_preview',
+          base: 'test',
           hostname: 'localhost',
-          open: true,
+          open: 'http://localhost:9001',
           livereload: true
         }
       }
@@ -32,34 +32,24 @@ module.exports = function(grunt) {
         }
       }
     },*/
-    concat: {
-      options: {
-        stripBanners: true,
-        banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
-        '<%= grunt.template.today("yyyy-mm-dd") %> */'
-      },
-      dist: {
-        src: ['js/src/**/*.js'],
-        dest: 'js/mosaicgrid.js'
-      }
-    },
-    uglify: {
-      options: {
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
-      },
-      dist: {
-        files: {
-          'js/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
-        }
-      }
-    },
+    //uglify: {
+      //options: {
+       // banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+      //},
+     // dist: {
+      //  files: {
+     //     'js/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
+     //   }
+     // }
+   // },
     sass: {
       dist: {
         files: {
-          '_preview/css/mosaicgrid.css': 'sass/mosaicgrid.scss',
-          '_preview/css/media_queries.css': 'sass/media_queries.scss',
-          '_preview/css/style.css': 'sass/style.scss',
-          '_preview/css/colors.css': 'sass/colors.scss'
+          'test/css/base.css': 'sass/base.scss',
+          'test/css/layout.css': 'sass/layout.scss',
+          'test/css/module.css': 'sass/module.scss',
+          'test/css/state.css': 'sass/state.scss',
+          'test/css/theme.css': 'sass/theme.scss'
         }
       }
     },
@@ -68,7 +58,7 @@ module.exports = function(grunt) {
         proxy: {
             host: 'localhost',
             port: 9001,
-            base: '_preview',
+            base: 'test',
             files: ['*']
         }
     },
@@ -77,37 +67,34 @@ module.exports = function(grunt) {
         stoponerror: false
       },
       files: {
-        src: ['_preview/index.html']
+        src: ['test/index.html']
       },
     },
     watch: {           
       options: {
-        livereload: {
-          port: 9001,
-          base: '_preview'
-        }
+        livereload: true
       },
       scripts: {
         files: 'js/**/*',
-        tasks: ['concat','copy','uglify'],
-        options: {
+        tasks: ['copy'/*,'uglify'*/],
+        /*options: {
           spawn: false,
-        }
+        }*/
       },
       css: {
-	    files: ['sass/*.scss'],
-	    tasks: ['sass']
+	      files: ['sass/*.scss'],
+	      tasks: ['sass']
       },
       html: {
-	    files: ['_preview/*.html'],
-	    tasks: ['reload'/*,'validation'*/]
+	      files: ['test/*.html'],
+	      tasks: ['reload'/*,'validation'*/]
       }
     },
     copy: {
 	      main: {
 		      files: [
-		      	{expand: true, src: ['js/*'], dest: '_preview/', filter: 'isFile'},
-		      	{expand: true, cwd: 'components/', src: ['**'], dest: '_preview/components/'}
+		      	{expand: true, src: ['js/*'], dest: 'test/', filter: 'isFile'},
+		      	{expand: true, cwd: 'components/', src: ['**'], dest: 'test/components/'}
 		      ]
 	      }
       }
@@ -124,7 +111,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-reload');
   grunt.loadNpmTasks('grunt-html-validation');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-concat');
+  //grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-copy');
   
@@ -132,6 +119,6 @@ module.exports = function(grunt) {
 ////////////////////////////////////
 ///////  TASKS
 ///////////////////////////////////
-  grunt.registerTask('default', ['connect', 'concat', 'watch', 'uglify', 'sass', 'copy', 'validation', 'reload'/*,'jshint'*/ ]);
+  grunt.registerTask('default', ['connect', /*'concat',*/ 'watch', 'uglify', 'sass', 'copy', 'validation', 'reload'/*,'jshint'*/ ]);
 
 };

@@ -1,8 +1,12 @@
-////////////////////////////  
-///  CORE ELEMENTS 
-////////////////////////////
-@import "partials/mixins";
+////////////////////////////////////////////////////////
+/////   BASE.scss
+/////   css for reset values
+/////   Scalable and Modular Architecture for CSS
+/////   https://smacss.com
+////////////////////////////////////////////////////////
 
+
+@import "partials/mixins";
 @import "partials/variables";
 
 body {
@@ -300,3 +304,7 @@ ul.tips {
   from { opacity: 0; }
   to { opacity: 1; } 
 }
+
+
+
+

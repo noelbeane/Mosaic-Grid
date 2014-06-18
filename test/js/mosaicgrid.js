@@ -1,5 +1,3 @@
-/*! mosaicgrid - v0.0.0 - 2013-10-15 */
-
 var subnavState = 0;
 var topnavState = 0;
 var orientation = "portrait";
@@ -7,6 +5,7 @@ var tileState = 0;
 var iconFolder = "images/glyphs/";
 var tilearr = new Array();
 var msnry = new Object();
+
 
 ////////////////////////////////////////////////////////////////
 ////////// INIT ON DOCUMENT READY 
@@ -37,9 +36,9 @@ function loadJSON(file) {
 		  tilearr.push(item);
 		});
 	  }
-	  	 
+
 	  createTiles();
-	  
+
 	  var container = document.querySelector('.mosaic_container');
 	  msnry = new Masonry( container, {
 	    columnWidth: 60,
@@ -161,7 +160,7 @@ function drawTile(label,desc,h,w,id,image,type,author,path,date) {
 	var tilePreloader = document.createElement('div');
 	var imgOverlay = image;
 	var imgType = "";
-	
+
 	switch(type){
 		case "Article":
 			imgType = "icon-file";
@@ -185,20 +184,20 @@ function drawTile(label,desc,h,w,id,image,type,author,path,date) {
 			imgType = "icon-forward";
 			break;
 	}
-	
+
 	$('#mosaic').append(tile);
 	tile.className = 'msnry_item';
 	tile.id = id + '_container';
 	tile.style.height = h + 'px';
 	tile.style.width = w + 'px';
-	
+
 	$(tile).append(tileDesc);
 	tileDesc.id = id + '_desc';
 	tileDesc.className = 'tile-desc';
 	tileDesc.style.height = h + 'px';
 	tileDesc.style.width = w + 'px';
 	$(tileDesc).append("<p>" + "<span class='tile-title'>" + label + "</span><br><span class='tile-author'>" + author + "</span><br><span class='tile-date'>" + date + "</span><br><br>" + desc + "</p>");
-	
+
 	$(tile).append(tileCover);
 	tileCover.id = id + '_cover';
 	tileCover.className = 'tile-cover tranz_norm';
@@ -207,27 +206,27 @@ function drawTile(label,desc,h,w,id,image,type,author,path,date) {
 	tileCover.style.backgroundColor = '#fff';
 	tileCover.style.paddingTop = ((h/2) - 20) + 'px';
 	tileCover.style.paddingLeft = ((w/2) - 20) + 'px';	
-	
+
 	$(tileCover).append(tilePreloader);
 	tilePreloader.style.className = 'preloader';
 	tilePreloader.style.height = '40px';
 	tilePreloader.style.width = '40px';
 	tilePreloader.style.backgroundImage = 'url("http://mosaicgrid.beane.biz/sites/all/themes/mosaicgrid/images/preloader_40x40.gif")';
-	
+
 	var img = new Image();
 	img.src = imgOverlay;
 	$(img).load(function(){
 		tileCover.style.backgroundImage = 'url(" ' + imgOverlay + ' ")';
 		$(tilePreloader).hide();
 	});
-		
+
 	$(tile).append(tileLabel);
 	tileLabel.id = id + '_label';
 	tileLabel.className = 'tile-label';
 	$(tileLabel).append("<div class='tile_icon_wrapper'><div class='" + imgType + " tile_icon' ></div></div><div class='tile_icon_point'></div><div class='tile_label_txt'>" + label + "</div>");
-	
+
 	$(tile).data("tileState",0);
-	
+
 	$(tile).mouseover(function() {
 		var cover = id + '_cover';
 		tileOpen(cover);
@@ -252,6 +251,3 @@ function tileClose(target,ref) {
 	$(document.getElementById(target)).data("tileState",0);
 	$(document.getElementById(target)).css("opacity", "1");
 }
-
-
-
