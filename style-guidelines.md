@@ -62,7 +62,7 @@ see [SMACSS](https://smacss.com)
  * typography styles included on this layer
 
 
-----
+
 ## Syntax
 
 * Hyphen delimited class names
