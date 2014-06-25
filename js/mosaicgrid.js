@@ -1,10 +1,12 @@
 var subnavState = 0;
 var topnavState = 0;
+var menuState = 0;
 var orientation = "portrait";
 var tileState = 0;
 var iconFolder = "images/glyphs/";
 var tilearr = new Array();
 var msnry = new Object();
+var mobileWidth = 680;
 
 
 ////////////////////////////////////////////////////////////////
@@ -27,7 +29,7 @@ function loadJSON(file) {
   $(document).ready(function(){	
 	var url = file;
 	var params = {format: 'json'};
-	console.log(file);
+	//console.log(file);
 	$.getJSON(url,params,function(json){
       
       if(json.mosaicgrid){
@@ -51,7 +53,6 @@ function loadJSON(file) {
 	  });
 	});
   });
-    
 }
 
 function footer(){
@@ -113,6 +114,28 @@ function topnavSlide(btn){
   }
 }
 
+
+function menuSlide(){
+  var page = document.getElementById("page-wrapper");
+  var menu = document.getElementById("menu-wrapper");
+  //check for mobile screen size
+  var width = window.innerWidth;
+  console.log(width);
+  if(menuState == 0) {
+    menuState = 1;
+    if(width < mobileWidth){
+	    page.style.width = "30%";
+      menu.style.width = "70%";
+    }else{
+	    page.style.width = "70%";
+      menu.style.width = "30%";
+    }
+  }else{
+	  menuState = 0;
+	  page.style.width = "100%";
+    menu.style.width = "0%";
+  }
+}
 
 ////////////////////////////////////////////////////////////////
 ////////// ORIENTATION
@@ -223,7 +246,7 @@ function drawTile(label,desc,h,w,id,image,type,author,path,date) {
 	$(tile).append(tileLabel);
 	tileLabel.id = id + '_label';
 	tileLabel.className = 'tile-label';
-	$(tileLabel).append("<div class='tile_icon_wrapper'><div class='" + imgType + " tile_icon' ></div></div><div class='tile_icon_point'></div><div class='tile_label_txt'>" + label + "</div>");
+	$(tileLabel).append(/*"<div class='tile_icon_wrapper'><div class='" + imgType + " tile_icon' ></div></div><div class='tile_icon_point'></div><div class='tile_label_txt'>" + label + "</div>"*/);
 
 	$(tile).data("tileState",0);
 

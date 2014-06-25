@@ -17,7 +17,8 @@
   transition: all 0.1s ease-out; }
 
 #main {
-  padding-bottom: 4em; }
+  padding-bottom: 4em;
+  margin: 0 1em; }
 
 #mainContent {
   overflow-y: hidden;
@@ -25,9 +26,6 @@
 
 .demo_message {
   width: 80%;
-  font-size: 1em;
-  font-weight: 300;
-  color: #666;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1em;
@@ -39,12 +37,13 @@
 .preloader {
   background-repeat: no-repeat; }
 
+/*
 .icomoon {
   color: #aaaaaa;
   font-size: 1.35em;
   padding: 0.25em 0 0 0;
   cursor: pointer; }
-
+*/
 .icoframe {
   border: 2px solid #FFF;
   background: white;
@@ -63,16 +62,16 @@
   float: left;
   padding: 0;
   margin: 0 auto 0 auto;
-  width: 10%;
+  /*width: 5em;*/
   height: 3.5em;
-  text-align: center;
+  /*text-align: center;*/
   cursor: pointer; }
 
 .menubtn_wrapper .icomoon {
   font-size: 1.75em;
   cursor: pointer;
   padding: 0;
-  margin: 0.5em 0 0 0; }
+  margin: 0.5em 0 0 1em; }
 
 .menubtn_wrapper .icomoon:hover {
   color: #666666; }
@@ -106,7 +105,7 @@
 .sitelogo {
   display: inline-block;
   float: left;
-  margin-left: 3em;
+  margin-left: 2em;
   padding-top: 0.35em; }
 
 .sitelogo h1 {
@@ -120,7 +119,68 @@
   overflow-x: hidden;
   width: 100%;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  display: block; }
+
+#menu-wrapper {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  width: 0%;
+  display: block;
+  padding: 0;
+  margin: 0;
+  float: left; }
+  #menu-wrapper ul, #menu-wrapper menu, #menu-wrapper dir {
+    display: block;
+    list-style-type: none;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0; }
+  #menu-wrapper li {
+    list-style: none;
+    display: block;
+    padding: 0 0 0 2em;
+    height: 3.5em; }
+    #menu-wrapper li .menu-label {
+      padding: 1.25em 0 0 0;
+      width: 80%;
+      display: inline-block; }
+    #menu-wrapper li .menu-icon {
+      padding: 0 0 0 0;
+      width: 20%;
+      display: inline-block; }
+      #menu-wrapper li .menu-icon .icon-search {
+        font-size: 1.25em; }
+      #menu-wrapper li .menu-icon .icon-chevron2 {
+        font-size: 0.8em; }
+  #menu-wrapper .menu-socnet-container {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 2em;
+    padding: 0 2em;
+    overflow: hidden; }
+  #menu-wrapper table, #menu-wrapper th, #menu-wrapper tr, #menu-wrapper td {
+    border: 0;
+    background: none;
+    text-align: center; }
+  #menu-wrapper .menu-socnet-ico {
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 0;
+    cursor: pointer;
+    display: block;
+    height: 3em;
+    width: 3em;
+    text-align: center;
+    -webkit-border-radius: 2em 2em 2em 2em;
+    border-radius: 2em 2em 2em 2em; }
+    #menu-wrapper .menu-socnet-ico .icomoon {
+      font-size: 1.5em;
+      padding-top: 0.5em; }
 
 .subnav_wrapper {
   float: left;
@@ -176,7 +236,8 @@
   display: inline-block;
   box-sizing: border-box;
   text-align: center;
-  overflow: auto; }
+  overflow: auto;
+  width: 100%; }
 
 .socnet_wrapper {
   width: 8.33333%;
@@ -422,7 +483,6 @@ ul.links li a:hover {
 .tile-cover {
   display: block;
   position: absolute;
-  background-color: #666;
   background-size: cover;
   background-clip: border-box;
   background-repeat: no-repeat;
@@ -466,10 +526,7 @@ ul.links li a:hover {
   bottom: -2.5em;
   height: 2.5em;
   overflow: auto;
-  width: 100%;
-  background: white;
-  -webkit-border-radius: 0 0 0.35em 0.35em;
-  border-radius: 0 0 0.35em 0.35em; }
+  width: 100%; }
 
 .tile_icon_wrapper {
   display: block;

@@ -5,30 +5,31 @@
 /////   https://smacss.com
 ////////////////////////////////////////////////////////
 
-
+@import "partials/mixins";
+@import "partials/variables";
 
 /* ---------- Colors ----------- */
 
 
 body{
-  background: #fff;
+  background: $clr-denary;
   
 }
 body.overlay {
-  color: #3b3b3b;
+  color: $clr-denary;
 }
 .comment .comment-arrow {
   border-color: #ffffff;
 }
-#page,
-#main-wrapper,
-#main-menu-links li a.active,
-#main-menu-links li.active-trail a {
-  /*background: #cccccc;*/
+#main-wrapper {
+  background: $clr-primary;
+  -webkit-box-shadow: -2px 2px 3px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow:    -2px 2px 3px 0px rgba(0, 0, 0, 1);
+  box-shadow:         -2px 2px 3px 0px rgba(0, 0, 0, 1);
 }
-#main-wrapper{
+/*#main-wrapper{
   background-image: url("../../images/textures/grid_light.png");
-}
+}*/
 .tabs ul.primary li a.active {
   background-color: #ffffff;
 }
@@ -37,13 +38,70 @@ body.overlay {
   border-bottom: 1px solid #ffffff;
 }
 
+#menu-wrapper {
+	background: $clr-denary;
+	color: white;
+	
+	.row-bottom {
+	  border-bottom: 1px solid $clr-primary;
+	}
+	
+	.menu-search {
+		background: $clr-secondary;
+		border-right: 1px solid $clr-denary;
+	}
+	
+	.menu-search:hover {
+		background: $clr-nonary;
+	}
+	
+	li:hover {
+		background: $clr-tertiary;
+	}
+	
+	li {	  
+		.menu-label {
+	    text-transform: uppercase;
+	    font-weight: 100;
+	    font-size: 0.9em;
+    }
+	}
+	
+	.menu-socnet-ico {
+	  opacity: 1;
+	}
+	
+	.menu-socnet-ico:hover {
+	  opacity: 0.3;
+  }
+  
+  .ico-facebook {
+	  background: #3f67c0;
+  }
+  .ico-twitter {
+	  background: #35b5eb;
+  }
+  .ico-vimeo {
+	  background: #26cfde;
+  }
+  .ico-rss {
+	  background: #ffa333;
+  }
+  .ico-gplus {
+	  background: #eb5b4c;
+  }
+  .ico-pinterest {
+	  background: #cf1717;
+  }
+  
+}
 
 a {
-  color: #0071B3;
+  color: $clr-tertiary;
 }
 a:hover,
 a:focus {
-  color: #018fe2;
+  color: $clr-secondary;
 }
 a:active {
   color: #23aeff;
@@ -65,8 +123,7 @@ a:active {
   color: #fffeff;
 }
 footer {
-  /*background: #555;*/
-  background-image: url("../../images/textures/grid_dark.png");
+  /*background: $clr-denary;*/
 }
 footer h2 {
   color: #999;
@@ -96,11 +153,11 @@ h3,
 h4,
 h5,
 h6 {
-  color: #666666;
+  color: white;
 }
 
 p {
-  color: #dddddd;
+  color: white;
 }
 
 tr.odd {
@@ -108,7 +165,7 @@ tr.odd {
 }
 
 header {
-  background: #333333;
+  background: $clr-secondary;
 }
 
 code {
@@ -152,6 +209,15 @@ tr.even {
   color: white;
 }
 
+.demo_message {
+  font-size: 1em;
+  font-weight: 300;
+  color: white;
+}
+
+.tile-label {
+  background: $clr-nonary; }
+  
 .subnav_wrapper .icomoon{
   color: white;
 }
@@ -186,14 +252,14 @@ tr.even {
   color: #555; }
 
 .menubtn_wrapper .icomoon {
-  color: #999; }
+  color: white; }
 .menubtn_wrapper .icomoon:hover {
-  color: #555; }
+  color: $clr-primary; }
 
 
 
 .tile-desc {
-  background: #ededed; 
+  background: $clr-nonary; 
 }
 .tile_icon_wrapper {
   background: #555;

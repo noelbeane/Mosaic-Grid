@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('../fonts/icomoon.eot?-lkc3t8');
-	src:url('../fonts/icomoon.eot?#iefix-lkc3t8') format('embedded-opentype'),
-		url('../fonts/icomoon.woff?-lkc3t8') format('woff'),
-		url('../fonts/icomoon.ttf?-lkc3t8') format('truetype'),
-		url('../fonts/icomoon.svg?-lkc3t8#icomoon') format('svg');
+	src:url('../fonts/icomoon.eot?j0ydyb');
+	src:url('../fonts/icomoon.eot?#iefixj0ydyb') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?j0ydyb') format('woff'),
+		url('../fonts/icomoon.ttf?j0ydyb') format('truetype'),
+		url('../fonts/icomoon.svg?j0ydyb#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -23,6 +23,24 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-wrench2:before {
+	content: "\e656";
+}
+.icon-search:before {
+	content: "\e657";
+}
+.icon-financials:before {
+	content: "\e658";
+}
+.icon-chevron2:before {
+	content: "\e653";
+}
+.icon-chevron3:before {
+	content: "\e654";
+}
+.icon-chevron4:before {
+	content: "\e655";
+}
 .icon-x:before {
 	content: "\e600";
 }

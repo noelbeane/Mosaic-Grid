@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>MOSAIC </title>
+  <title>MOSAIC GRID</title>
   <script type="text/javascript" src="components/jquery/jquery.js"></script>
   <script type="text/javascript" src="components/modernizr/modernizr.js"></script>
   <script type="text/javascript" src="components/jquery-ui/ui/jquery-ui.js"></script>
@@ -11,47 +11,49 @@
   <link type="text/css" rel="stylesheet" href="css/global.css">
 </head>
 <body onload="init('../mosaicgrid.json')">
-<div id="page-wrapper">
+
+<div id="menu-wrapper" class="tranz_norm">
+	<div class="">
+	  <ul>
+	    <li class="tranz_norm row-bottom menu-search"><div class="menu-label">search</div><div class="menu-icon"><div class="icon-search icomoon"></div></div></li>
+	    <li class="tranz_norm"><div class="menu-label">home</div><div class="menu-icon"><div class="icon-chevron2 icomoon"></div></div></li>
+	    <li class="tranz_norm"><div class="menu-label">about</div><div class="menu-icon"><div class="icon-chevron2 icomoon"></div></div></li>
+	    <li class="tranz_norm"><div class="menu-label">work</div><div class="menu-icon"><div class="icon-chevron2 icomoon"></div></div></li>
+	    <li class="tranz_norm"><div class="menu-label">blog</div><div class="menu-icon"><div class="icon-chevron2 icomoon"></div></div></li>
+	    <li class="tranz_norm"><div class="menu-label">contact</div><div class="menu-icon"><div class="icon-chevron2 icomoon"></div></div></li>
+	    <li class="tranz_norm row-bottom"><div class="menu-label">settings</div><div class="menu-icon"><div class="icon-chevron2 icomoon"></div></div></li>
+	  </ul>
+	</div> 
+	<div class="menu-socnet-container">
+		<table>
+		  <tr>
+			  <td><div class="menu-socnet-ico tranz_norm ico-facebook"><div class="icon-facebook icomoon"></div></div></td>
+			  <td><div class="menu-socnet-ico tranz_norm ico-twitter"><div class="icon-twitter icomoon"></div></div></td>
+			  <td><div class="menu-socnet-ico tranz_norm ico-vimeo"><div class="icon-vimeo icomoon"></div></div></td>
+		  </tr>
+		  <tr>
+			  <td><div class="menu-socnet-ico tranz_norm ico-rss"><div class="icon-feed icomoon"></div></div></td>
+			  <td><div class="menu-socnet-ico tranz_norm ico-gplus"><div class="icon-googleplus icomoon"></div></div></td>
+			  <td><div class="menu-socnet-ico tranz_norm ico-pinterest"><div class="icon-pinterest3 icomoon"></div></div></td>
+		  </tr>
+		</table>		
+	</div>	
+	
+</div>
+
+<div id="page-wrapper" class="tranz_norm">
 	<!-- /////////////////////////////////////////   START HEADER   ///////////////////////////////-->
 	<div id="header" class="<?php print $secondary_menu ? 'with-secondary-menu': 'without-secondary-menu'; ?>">      
 		<div class="row clearfix" id="row_header">			
 			<header>
-				<div class="sitelogo_wrapper" id="sitelogo">
-					<div class="sitelogo"><h1>Mosaic Grid</h1></div>						
-				</div>
-				<div class="menubtn_wrapper" id="sitemenuBtn" onclick="topnavSlide('menu');">
+				<div class="menubtn_wrapper" id="sitemenuBtn" onclick="menuSlide();">
 					<div class="icon-menu icomoon tranz_norm"></div>
 				</div>
-				<div class="searchbox_wrapper" id="searchbox">
-					<input class="searchinput" type="text" name="search" value="Search" size="24" onFocus="this.value=''">
-				</div>
-				<div class="toolbox_wrapper" id="toolbox">
-					<div class="toolboxBtn" id="toolboxBtn" onclick="topnavSlide('tools');">
-						<div class="icon-cog icomoon tranz_norm"></div>
-					</div>
-				</div>
-			</header>
-		</div>    
-    	<!-- ////////////////////////////////////  START DROPDOWN ROW  ///////////////////////////////////// -->
-		<div class="row clearfix" id="row_drawer">
-			<div class="drawer-wrapper tranz_norm" id="drawer">				
-				<div class="mainnavList" id="mainnav">
-					<ul>
-						<li><a href="http://mosaicgrid.beane.biz/user">Site Section 01</a></li>
-						<li><a href="http://mosaicgrid.beane.biz/user/register">Site Section 02</a></li>
-						<li><a href="http://mosaicgrid.beane.biz/user/password">Site Section 03</a></li>
-					</ul>
+				<div class="sitelogo_wrapper" id="sitelogo">
+					<div class="sitelogo"><h1>Mosaic Grid</h1></div>						
 				</div>				
-				<div class="toolboxList" id="tools">					
-					<ul>
-						<li><a href="http://mosaicgrid.beane.biz/user">Login</a></li>
-						<li><a href="http://mosaicgrid.beane.biz/user/register">Create New Account</a></li>
-						<li><a href="http://mosaicgrid.beane.biz/user/password">Request New Password</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<!-- ////////////////////////////////////  END DROPDOWN ROW  ///////////////////////////////////// --> 
+			</header>
+		</div>    	 
 	</div>
 	<!-- //////////////////////// END HEADER ///////////////////////// -->
 
@@ -69,30 +71,11 @@
 					</label>
 				</div>
 			</div>
-        	<div class="subnav_wrapper tranz_norm" id="subnav" onclick="subnavSlide();">
-				<div class="subnavBtn" id="subnavBtn"><div class="icon-tag icomoon tranz_norm"></div></div>
-		    	<div class="subnavList tranz_fast" id="subnavList">
-			  		<ul>
-			    		<li>Tag Cloud Item Lorem Ipsum</li>
-						<li>Tag Cloud Item Lorem Ipsum</li>
-						<li>Tag Cloud Item Lorem Ipsum</li>
-			  		</ul>
-				</div>				
-			</div>
-		  	<div class="socnet_wrapper" id="socnet">
-		    	<ul>
-					<li><div class="icoframe"><div class="icon-facebook icomoon tranz_norm"></div></div></li>		
-					<li><div class="icoframe"><div class="icon-twitter icomoon tranz_norm"></div></div></li>
-					<li><div class="icoframe"><div class="icon-instagram icomoon tranz_norm"></div></div></li>
-					<li><div class="icoframe"><div class="icon-vimeo icomoon tranz_norm"></div></div></li>
-					<li><div class="icoframe"><div class="icon-github icomoon tranz_norm"></div></div></li>
-		    	</ul>
-			</div>
 			<div class="main_content_wrapper tranz_norm" id="mainContent">			   	
 				<div class="demo_message">
 			  		<br/>This is a demonstration of the Mosaic Grid Theme, built with the <a href="http://masonry.desandro.com/" target="_blank">Masonry</a> Javascript library.
 				</div>  
-				<div class="mosaic_container" id='mosaic' ></div>			   
+				<div class="mosaic_container" id='mosaic' ></div>		   
 			</div>
     	</div>
 	</div>
