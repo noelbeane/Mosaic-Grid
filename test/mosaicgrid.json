@@ -9,7 +9,9 @@
     "field_post_cover":"/images/test/img_01.jpg",
     "field_post_cover_height":"200",
     "field_post_cover_width":"200",
-    "path":"page.html"}},
+    "path":"page.html",
+    "likes":"3",
+    "comments":"6"}},
   {"tile":
     {"title":"Demo Image 02",
     "name":"Admin",
@@ -19,7 +21,9 @@
     "field_post_cover":"/images/test/img_02.jpg",
     "field_post_cover_height":"180",
     "field_post_cover_width":"400",
-    "path":"page.html"}},
+    "path":"page.html",
+    "likes":"7",
+    "comments":"2"}},
   {"tile":
     {"title":"Demo Image 03",
     "name":"Admin",
@@ -29,7 +33,9 @@
     "field_post_cover":"/images/test/img_03.jpg",
     "field_post_cover_height":"266",
     "field_post_cover_width":"400",
-    "path":"page.html"}},
+    "path":"page.html",
+    "likes":"0",
+    "comments":"1"}},
   {"tile":
     {"title":"Demo Image 04",
     "name":"Admin",
@@ -39,7 +45,9 @@
     "field_post_cover":"/images/test/img_04.jpg",
     "field_post_cover_height":"400",
     "field_post_cover_width":"300",
-    "path":"page.html"}},
+    "path":"page.html",
+    "likes":"3",
+    "comments":"4"}},
   {"tile":
     {"title":"Demo Image 05",
     "name":"Admin",
@@ -49,7 +57,9 @@
     "field_post_cover":"/images/test/img_05.jpg",
     "field_post_cover_height":"400",
     "field_post_cover_width":"300",
-    "path":"page.html"}},
+    "path":"page.html",
+    "likes":"18",
+    "comments":"24"}},
   {"tile":
     {"title":"Demo Image 06",
     "name":"Admin",
@@ -59,7 +69,9 @@
     "field_post_cover":"/images/test/img_06.jpg",
     "field_post_cover_height":"400",
     "field_post_cover_width":"300",
-    "path":"page.html"}},
+    "path":"page.html",
+    "likes":"1",
+    "comments":"0"}},
   {"tile":
     {"title":"Demo Image 07",
     "name":"Admin",
@@ -69,7 +81,9 @@
     "field_post_cover":"/images/test/img_07.jpg",
     "field_post_cover_height":"400",
     "field_post_cover_width":"300",
-    "path":"page.html"}},
+    "path":"page.html",
+    "likes":"0",
+    "comments":"0"}},
   {"tile":
     {"title":"Demo Image 08",
     "name":"Admin",
@@ -79,7 +93,9 @@
     "field_post_cover":"/images/test/img_08.jpg",
     "field_post_cover_height":"150",
     "field_post_cover_width":"300",
-    "path":"page.html"}},
+    "path":"page.html",
+    "likes":"5",
+    "comments":"0"}},
   {"tile":
     {"title":"Demo Image 09",
     "name":"Admin",
@@ -89,7 +105,9 @@
     "field_post_cover":"/images/test/img_09.jpg",
     "field_post_cover_height":"200",
     "field_post_cover_width":"300",
-    "path":"page.html"}},
+    "path":"page.html",
+    "likes":"2",
+    "comments":"2"}},
   {"tile":
     {"title":"Demo Image 10",
     "name":"Admin",
@@ -99,5 +117,7 @@
     "field_post_cover":"/images/test/img_10.jpg",
     "field_post_cover_height":"400",
     "field_post_cover_width":"300",
-    "path":"page.html"}  
+    "path":"page.html",
+    "likes":"16",
+    "comments":"4"} 
 }]}

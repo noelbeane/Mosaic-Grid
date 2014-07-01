@@ -114,7 +114,6 @@ function topnavSlide(btn){
   }
 }
 
-
 function menuSlide(){
   var page = document.getElementById("page-wrapper");
   var menu = document.getElementById("menu-wrapper");
@@ -169,11 +168,13 @@ function createTiles() {
       var id = i;
       var type = tempArr[i].field_post_type;
       var author = tempArr[i].name;
-      drawTile(title,desc,h,w,id,image,type,author,path,date);
+      var likes = tempArr[i].likes;
+      var comments = tempArr[i].comments;
+      drawTile(title,desc,h,w,id,image,type,author,path,date,likes,comments);
 	}
 }
 
-function drawTile(label,desc,h,w,id,image,type,author,path,date) {
+function drawTile(label,desc,h,w,id,image,type,author,path,date,likes,comments) {
 	var tile = document.createElement('div');
 	var tileContainer = document.createElement('div');
 	var tileBtn = document.createElement('div');
@@ -181,6 +182,7 @@ function drawTile(label,desc,h,w,id,image,type,author,path,date) {
 	var tileLabel = document.createElement('div');
 	var tileDesc = document.createElement('div');
 	var tilePreloader = document.createElement('div');
+	var tileTitle = document.createElement('div');
 	var imgOverlay = image;
 	var imgType = "";
 
@@ -228,7 +230,7 @@ function drawTile(label,desc,h,w,id,image,type,author,path,date) {
 	tileCover.style.width = w + 'px';
 	tileCover.style.backgroundColor = '#fff';
 	tileCover.style.paddingTop = ((h/2) - 20) + 'px';
-	tileCover.style.paddingLeft = ((w/2) - 20) + 'px';	
+	tileCover.style.paddingLeft = ((w/2) - 20) + 'px';
 
 	$(tileCover).append(tilePreloader);
 	tilePreloader.style.className = 'preloader';
@@ -241,13 +243,24 @@ function drawTile(label,desc,h,w,id,image,type,author,path,date) {
 	$(img).load(function(){
 		tileCover.style.backgroundImage = 'url(" ' + imgOverlay + ' ")';
 		$(tilePreloader).hide();
+		
+		/*
+		$(tile).append(tileTitle);
+	  tileTitle.style.className = 'tileCoverTitle';
+	  tileTitle.style.zIndex = 3000;
+	  $(tileDesc).append('<p>test</p>');
+		*/
+		
 	});
 
 	$(tile).append(tileLabel);
 	tileLabel.id = id + '_label';
 	tileLabel.className = 'tile-label';
-	$(tileLabel).append(/*"<div class='tile_icon_wrapper'><div class='" + imgType + " tile_icon' ></div></div><div class='tile_icon_point'></div><div class='tile_label_txt'>" + label + "</div>"*/);
-
+	$(tileLabel).append(
+	"<div class='icomoon'><div class='icon-bubble'></div></div><div class='count'>"+ comments +"</div><div class='icomoon'><div class='icon-heart'></div></div><div class='count'>"+ likes +"</div>");
+	
+	
+  
 	$(tile).data("tileState",0);
 
 	$(tile).mouseover(function() {

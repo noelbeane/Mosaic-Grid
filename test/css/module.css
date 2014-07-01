@@ -151,7 +151,7 @@
       padding: 0 0 0 0;
       width: 20%;
       display: inline-block; }
-      #menu-wrapper li .menu-icon .icon-search {
+      #menu-wrapper li .menu-icon .icon-search, #menu-wrapper li .menu-icon .icon-cog {
         font-size: 1.25em; }
       #menu-wrapper li .menu-icon .icon-chevron2 {
         font-size: 0.8em; }
@@ -161,6 +161,11 @@
     width: 100%;
     margin-top: 2em;
     padding: 0 2em;
+    overflow: hidden; }
+  #menu-wrapper .menu-settings-container {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
     overflow: hidden; }
   #menu-wrapper table, #menu-wrapper th, #menu-wrapper tr, #menu-wrapper td {
     border: 0;
@@ -526,7 +531,30 @@ ul.links li a:hover {
   bottom: -2.5em;
   height: 2.5em;
   overflow: auto;
-  width: 100%; }
+  width: 100%;
+  border-top: 1px solid #ccc; }
+  .tile-label .icomoon {
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 2em;
+    height: 100%;
+    padding-top: 0.5em;
+    color: #35b5eb;
+    font-size: 1.25em; }
+  .tile-label .count {
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 3em;
+    height: 100%;
+    padding-top: 0.85em;
+    text-align: left;
+    color: #666;
+    font-size: 0.85em;
+    border-right: 1px solid #ccc; }
 
 .tile_icon_wrapper {
   display: block;
