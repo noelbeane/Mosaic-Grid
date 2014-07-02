@@ -1,7 +1,5 @@
-var subnavState = 0;
 var topnavState = 0;
 var menuState = 0;
-var orientation = "portrait";
 var tileState = 0;
 var iconFolder = "images/glyphs/";
 var tilearr = new Array();
@@ -21,7 +19,6 @@ function init(url){
 }
 
 $(window).resize(function() {
-    checkOrientation();
     footer();
 });
 
@@ -71,55 +68,10 @@ function footer(){
 ////////// NAVIGATION AND MENUS 
 ////////////////////////////////////////////////////////////////
 
-function subnavSlide(){
-  var subnav = document.getElementById("subnav");
-  var mainContent = document.getElementById("mainContent");
-  var subnavlist = document.getElementById("subnavList");
-  var subnavbtn = document.getElementById("subnavBtn");
-  if(subnavState == 0) {
-	  subnavState = 1;
-	  subnav.style.height = "12em";
-	  subnav.style.width = "25%";
-	  mainContent.style.width = "66.66666%";
-  }else{
-	  subnavState = 0;  
-	  subnav.style.height = "3em";
-	  subnav.style.width = "8.33333%";
-	  mainContent.style.width = "83.33333%";
-  }
-  $(subnavlist).slideToggle();
-  $('.mosaic_container').masonry();
-}
-
-function topnavSlide(btn){
-  var mainnav = document.getElementById("mainnav");
-  var tools = document.getElementById("tools");
-  var sitemenubtn = document.getElementById("sitemenuBtn");
-  var drawer = document.getElementById("drawer");
-  if(topnavState == 0) {
-	  topnavState = 1;
-	  drawer.style.height = "9em";
-	  if(btn == 'menu'){
-	  	mainnav.style.display = "block";
-	  	tools.style.display = "none";
-	  }else{
-		tools.style.display = "block";
-		mainnav.style.display = "none";
-	  }
-  }else{
-	  topnavState = 0;
-	  drawer.style.height = "0";
-	  tools.style.display = "none";
-	  mainnav.style.display = "none";
-  }
-}
-
 function menuSlide(){
   var page = document.getElementById("page-wrapper");
   var menu = document.getElementById("menu-wrapper");
-  //check for mobile screen size
-  var width = window.innerWidth;
-  console.log(width);
+  var width = window.innerWidth; //check for mobile screen size
   if(menuState == 0) {
     menuState = 1;
     if(width < mobileWidth){
@@ -133,22 +85,29 @@ function menuSlide(){
 	  menuState = 0;
 	  page.style.width = "100%";
     menu.style.width = "0%";
+    $("#search_input").val(""); //clear search box on close
+  }
+}
+
+
+function settingsMenuSlide(){
+  var tools = document.getElementById("tools");
+  var sitemenubtn = document.getElementById("sitemenuBtn");
+  var drawer = document.getElementById("drawer");
+  if(topnavState == 0) {
+	  topnavState = 1;
+	  drawer.style.height = "9em";
+		tools.style.display = "block";
+  }else{
+	  topnavState = 0;
+	  drawer.style.height = "0";
+	  tools.style.display = "none";
   }
 }
 
 ////////////////////////////////////////////////////////////////
-////////// ORIENTATION
+////////// MASONRY TILES
 ////////////////////////////////////////////////////////////////
-
-function checkOrientation() {
-	var w = $(window).width();
-	var h = $(window).height();
-	if (h > w){
-		orientation = "portrait";
-	}else{
-		orientation = "landscape";
-	}
-}
 
 function createTiles() { 
 	var tempArr = new Array();
@@ -183,6 +142,7 @@ function drawTile(label,desc,h,w,id,image,type,author,path,date,likes,comments) 
 	var tileDesc = document.createElement('div');
 	var tilePreloader = document.createElement('div');
 	var tileTitle = document.createElement('div');
+	var tileType = document.createElement('div');
 	var imgOverlay = image;
 	var imgType = "";
 
@@ -216,24 +176,17 @@ function drawTile(label,desc,h,w,id,image,type,author,path,date,likes,comments) 
 	tile.style.height = h + 'px';
 	tile.style.width = w + 'px';
 
-	$(tile).append(tileDesc);
-	tileDesc.id = id + '_desc';
-	tileDesc.className = 'tile-desc';
-	tileDesc.style.height = h + 'px';
-	tileDesc.style.width = w + 'px';
-	$(tileDesc).append("<p>" + "<span class='tile-title'>" + label + "</span><br><span class='tile-author'>" + author + "</span><br><span class='tile-date'>" + date + "</span><br><br>" + desc + "</p>");
-
 	$(tile).append(tileCover);
 	tileCover.id = id + '_cover';
 	tileCover.className = 'tile-cover tranz_norm';
 	tileCover.style.height = h + 'px';
 	tileCover.style.width = w + 'px';
-	tileCover.style.backgroundColor = '#fff';
+	tileCover.style.backgroundColor = '#0e112a';
 	tileCover.style.paddingTop = ((h/2) - 20) + 'px';
 	tileCover.style.paddingLeft = ((w/2) - 20) + 'px';
 
 	$(tileCover).append(tilePreloader);
-	tilePreloader.style.className = 'preloader';
+	tilePreloader.className = 'preloader';
 	tilePreloader.style.height = '40px';
 	tilePreloader.style.width = '40px';
 	tilePreloader.style.backgroundImage = 'url("http://mosaicgrid.beane.biz/sites/all/themes/mosaicgrid/images/preloader_40x40.gif")';
@@ -242,48 +195,57 @@ function drawTile(label,desc,h,w,id,image,type,author,path,date,likes,comments) 
 	img.src = imgOverlay;
 	$(img).load(function(){
 		tileCover.style.backgroundImage = 'url(" ' + imgOverlay + ' ")';
-		$(tilePreloader).hide();
-		
-		/*
-		$(tile).append(tileTitle);
-	  tileTitle.style.className = 'tileCoverTitle';
-	  tileTitle.style.zIndex = 3000;
-	  $(tileDesc).append('<p>test</p>');
-		*/
-		
+		$(tilePreloader).hide();		
 	});
 
 	$(tile).append(tileLabel);
 	tileLabel.id = id + '_label';
 	tileLabel.className = 'tile-label';
 	$(tileLabel).append(
-	"<div class='icomoon'><div class='icon-bubble'></div></div><div class='count'>"+ comments +"</div><div class='icomoon'><div class='icon-heart'></div></div><div class='count'>"+ likes +"</div>");
+	"<div class='icomoon'><div class='icon-bubble'></div></div><div class='count'>"+ comments +"</div><div class='icomoon'><div class='icon-heart'></div></div><div class='count'>"+ likes +"</div>");	
+
+	$(tile).append(tileTitle);
+	tileTitle.id = id + '_title';
+	tileTitle.className = 'tile-cover-title tranz_norm';
+	$(tileTitle).append("<div class='tile-title-txt'>" + label + "</div>");	
 	
-	
-  
+	$(tile).append(tileType);
+	tileType.id = id + '_type';
+	tileType.className = 'tile-cover-type tranz_norm';
+	$(tileType).append("<div class='tile-icon'><div class='" + imgType + "'></div></div>");
+
 	$(tile).data("tileState",0);
 
 	$(tile).mouseover(function() {
-		var cover = id + '_cover';
-		tileOpen(cover);
+		$(this).children("div.tile-cover-title").css("opacity", "0.8");
+		$(this).children("div.tile-cover-title").css("top", "1em");
+		$(this).children("div.tile-cover-type").css("opacity", "0.8");
+		$(this).children("div.tile-cover-type").css("top", "4em");
 	});
 	$(tile).mouseout(function() {
-		var cover = id + '_cover';
-		var ref = id + '_desc';
-		tileClose(cover,ref);
+		$(this).children("div.tile-cover-title").css("opacity", "0");
+		$(this).children("div.tile-cover-title").css("top", "0");
+		$(this).children("div.tile-cover-type").css("opacity", "0");
+		$(this).children("div.tile-cover-type").css("top", "2.5em");
 	});
 	$(tile).click(function() {
 		window.open(path);
 	});
 }
 
-function tileOpen(target) {
-	var h = $(document.getElementById(target)).parent().height();
-	$(document.getElementById(target)).data("tileState",1);
-	$(document.getElementById(target)).css("opacity", "0");
+
+////////////////////////////////////////////////////////////////
+////////// SEARCH
+////////////////////////////////////////////////////////////////
+
+function searchAction(){
+	var value = $("#search_input").val();
+	console.log(value);
 }
-function tileClose(target,ref) {
-	var h = $(document.getElementById(ref)).parent().height();
-	$(document.getElementById(target)).data("tileState",0);
-	$(document.getElementById(target)).css("opacity", "1");
-}
+
+
+
+
+
+
+

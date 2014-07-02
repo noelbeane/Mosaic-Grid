@@ -15,16 +15,20 @@
 <div id="menu-wrapper" class="tranz_norm">
 	<div class="">
 	  <ul>
-	    <li class="tranz_norm row-bottom menu-search"><div class="menu-label">search</div><div class="menu-icon"><div class="icon-search icomoon"></div></div></li>
+	    <li class="tranz_norm menu-search">
+	      <form action="javascript:searchAction()">
+	        <div class="menu-search-input"><input id="search_input" type="text" class="tranz_norm" placeholder="Search" required></div>
+	        <div class="menu-icon" onclick="searchAction();"><div class="icon-search icomoon"></div></div>
+	      </form>
+	    </li>
 	    <li class="tranz_norm"><div class="menu-label">home</div><div class="menu-icon"><div class="icon-chevron2 icomoon"></div></div></li>
 	    <li class="tranz_norm"><div class="menu-label">about</div><div class="menu-icon"><div class="icon-chevron2 icomoon"></div></div></li>
 	    <li class="tranz_norm"><div class="menu-label">work</div><div class="menu-icon"><div class="icon-chevron2 icomoon"></div></div></li>
 	    <li class="tranz_norm"><div class="menu-label">blog</div><div class="menu-icon"><div class="icon-chevron2 icomoon"></div></div></li>
 	    <li class="tranz_norm"><div class="menu-label">contact</div><div class="menu-icon"><div class="icon-chevron2 icomoon"></div></div></li>
-	    <li class="tranz_norm row-bottom"><div class="menu-label">settings</div><div class="menu-icon"><div class="icon-cog icomoon"></div></div></li>
 	  </ul>
-	</div> 
-	<div class="menu-socnet-container">
+	</div>
+	<div class="menu-socnet-container tranz_norm">
 		<table>
 		  <tr>
 			  <td><div class="menu-socnet-ico tranz_norm ico-facebook"><div class="icon-facebook icomoon"></div></div></td>
@@ -38,7 +42,6 @@
 		  </tr>
 		</table>		
 	</div>
-	<div class="menu-settings-container">test</div>
 	
 </div>
 
@@ -52,27 +55,36 @@
 				</div>
 				<div class="sitelogo_wrapper" id="sitelogo">
 					<div class="sitelogo"><h1>Mosaic Grid</h1></div>						
-				</div>				
+				</div>
+				<div class="toolbox_wrapper" id="toolbox">
+					<div class="toolboxBtn" id="toolboxBtn" onclick="settingsMenuSlide();">
+						<div class="icon-cog icomoon tranz_norm"></div>
+					</div>
+				</div>		
 			</header>
-		</div>    	 
+		</div>
+		<!-- ////////////////////////////////////  START DROPDOWN ROW  ///////////////////////////////////// -->
+		<div class="row clearfix" id="row_drawer">
+			<div class="drawer-wrapper tranz_norm" id="drawer">	
+				<div class="toolboxList" id="tools">					
+					<ul>
+						<li><a href="/user">Login</a></li>
+						<li><a href="/user/register">Create New Account</a></li>
+						<li><a href="/user/password">Request New Password</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- ////////////////////////////////////  END DROPDOWN ROW  ///////////////////////////////////// --> 
+		   	 
 	</div>
 	<!-- //////////////////////// END HEADER ///////////////////////// -->
 
 
-
 	<!-- //////////////////////// START MAIN ///////////////////////// -->
 	<div id="main-wrapper" class="clearfix">
-    	<div id="main" class="clearfix">  
-  			<!-- //////////////////////////////////  MOBILE SEARCH ROW  /////////////////////////////////// -->
-			<div class="mobile_search" id="mobilesearch">
-				<div class="mobile-searchbox-wrapper" id="mobilesearchbox">
-					<label class="input searchinput">
-						<span style="color: rgb(153, 153, 153);">Search</span>
-						<input type="text" />
-					</label>
-				</div>
-			</div>
-			<div class="main_content_wrapper tranz_norm" id="mainContent">			   	
+    	<div id="main" class="clearfix">
+			<div class="main_content_wrapper tranz_norm" id="mainContent">	   	
 				<div class="demo_message">
 			  		<br/>This is a demonstration of the Mosaic Grid Theme, built with the <a href="http://masonry.desandro.com/" target="_blank">Masonry</a> Javascript library.
 				</div>  

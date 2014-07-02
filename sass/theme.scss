@@ -52,19 +52,51 @@ body.overlay {
 	}
 	
 	.menu-search:hover {
-		background: $clr-nonary;
+		background: $clr-tertiary;
 	}
+	
+	.menu-search-input {
+	    
+	  input[type=text] {
+	    background: none;
+	    border: 0px;
+	    color: white;
+	  }
+	  input[type=text]:focus {
+		  outline: none;
+	  }
+	  input[type=text]:focus::-webkit-input-placeholder {
+		  opacity: 0;
+	  }
+	  input[type=text]:focus:-moz-placeholder {
+		  opacity: 0;
+	  }
+	  input[type=text]:focus::-moz-placeholder {
+		  opacity: 0;
+	  }
+	  input[type=text]:focus:-ms-input-placeholder {
+		  opacity: 0;
+	  }
+	  ::-webkit-input-placeholder {
+      color: white;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+      color: white;  
+    }
+    ::-moz-placeholder {  /* Firefox 19+ */
+      color: white;  
+    }
+    :-ms-input-placeholder {  
+      color: white;  
+    }
+  }
 	
 	li:hover {
 		background: $clr-tertiary;
 	}
 	
 	li {	  
-		.menu-label {
-	    text-transform: uppercase;
-	    font-weight: 100;
-	    font-size: 0.9em;
-    }
+		
 	}
 	
 	.menu-socnet-ico {
@@ -144,8 +176,7 @@ footer h2 a:hover {
   color: #fff;
 } 
 .drawer-wrapper {
-  background-image: url("../../images/textures/grid_dark.png");
-  /*background: #555;*/
+  background: $clr-denary;
 }
 h1,
 h2,
@@ -247,16 +278,28 @@ tr.even {
   color: #f7aa9a; }
 
 .toolbox_wrapper .icomoon {
-  color: #999; }
+  color: white; }
 .toolbox_wrapper .icomoon:hover {
-  color: #555; }
+  color: $clr-primary; }
+  
+.toolboxList a {
+  color: $clr-tertiary;}
+.toolboxList a:hover {
+  color: white; }
+
 
 .menubtn_wrapper .icomoon {
   color: white; }
 .menubtn_wrapper .icomoon:hover {
   color: $clr-primary; }
 
+.tile-cover-title {
+  background: $clr-primary;
+}
 
+.tile-cover-type {
+  background: $clr-primary;
+}
 
 .tile-desc {
   background: $clr-nonary; 
@@ -287,3 +330,13 @@ tr.even {
 .searchinput {
   color: #999;
 }
+
+
+
+
+
+
+
+
+
+

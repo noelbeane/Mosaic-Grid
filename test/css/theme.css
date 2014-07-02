@@ -33,13 +33,33 @@ body.overlay {
     background: #3f67c0;
     border-right: 1px solid #0e112a; }
   #menu-wrapper .menu-search:hover {
-    background: #e1e2e9; }
+    background: #35b5eb; }
+  #menu-wrapper .menu-search-input input[type=text] {
+    background: none;
+    border: 0px;
+    color: white; }
+  #menu-wrapper .menu-search-input input[type=text]:focus {
+    outline: none; }
+  #menu-wrapper .menu-search-input input[type=text]:focus::-webkit-input-placeholder {
+    opacity: 0; }
+  #menu-wrapper .menu-search-input input[type=text]:focus:-moz-placeholder {
+    opacity: 0; }
+  #menu-wrapper .menu-search-input input[type=text]:focus::-moz-placeholder {
+    opacity: 0; }
+  #menu-wrapper .menu-search-input input[type=text]:focus:-ms-input-placeholder {
+    opacity: 0; }
+  #menu-wrapper .menu-search-input ::-webkit-input-placeholder {
+    color: white; }
+  #menu-wrapper .menu-search-input :-moz-placeholder {
+    /* Firefox 18- */
+    color: white; }
+  #menu-wrapper .menu-search-input ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: white; }
+  #menu-wrapper .menu-search-input :-ms-input-placeholder {
+    color: white; }
   #menu-wrapper li:hover {
     background: #35b5eb; }
-  #menu-wrapper li .menu-label {
-    text-transform: uppercase;
-    font-weight: 100;
-    font-size: 0.9em; }
   #menu-wrapper .menu-socnet-ico {
     opacity: 1; }
   #menu-wrapper .menu-socnet-ico:hover {
@@ -101,8 +121,7 @@ footer h2 a:hover {
   color: #fff; }
 
 .drawer-wrapper {
-  background-image: url("../../images/textures/grid_dark.png");
-  /*background: #555;*/ }
+  background: #0e112a; }
 
 h1,
 h2,
@@ -187,16 +206,28 @@ tr.even {
   color: #f7aa9a; }
 
 .toolbox_wrapper .icomoon {
-  color: #999; }
+  color: white; }
 
 .toolbox_wrapper .icomoon:hover {
-  color: #555; }
+  color: #002b53; }
+
+.toolboxList a {
+  color: #35b5eb; }
+
+.toolboxList a:hover {
+  color: white; }
 
 .menubtn_wrapper .icomoon {
   color: white; }
 
 .menubtn_wrapper .icomoon:hover {
   color: #002b53; }
+
+.tile-cover-title {
+  background: #002b53; }
+
+.tile-cover-type {
+  background: #002b53; }
 
 .tile-desc {
   background: #e1e2e9; }
