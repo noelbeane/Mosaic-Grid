@@ -182,14 +182,14 @@ function drawTile(label,desc,h,w,id,image,type,author,path,date,likes,comments) 
 	tileCover.style.height = h + 'px';
 	tileCover.style.width = w + 'px';
 	tileCover.style.backgroundColor = '#0e112a';
-	tileCover.style.paddingTop = ((h/2) - 20) + 'px';
-	tileCover.style.paddingLeft = ((w/2) - 20) + 'px';
+	tileCover.style.paddingTop = ((h/2) - 32) + 'px';
+	tileCover.style.paddingLeft = ((w/2) - 32) + 'px';
 
 	$(tileCover).append(tilePreloader);
 	tilePreloader.className = 'preloader';
-	tilePreloader.style.height = '40px';
-	tilePreloader.style.width = '40px';
-	tilePreloader.style.backgroundImage = 'url("http://mosaicgrid.beane.biz/sites/all/themes/mosaicgrid/images/preloader_40x40.gif")';
+	tilePreloader.style.height = '64px';
+	tilePreloader.style.width = '64px';
+	tilePreloader.style.backgroundImage = 'url("../images/preloader.gif")';
 
 	var img = new Image();
 	img.src = imgOverlay;
@@ -240,7 +240,7 @@ function drawTile(label,desc,h,w,id,image,type,author,path,date,likes,comments) 
 
 function searchAction(){
 	var value = $("#search_input").val();
-	console.log(value);
+	//console.log(value);
 }
 
 
