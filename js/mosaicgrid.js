@@ -90,7 +90,7 @@ function menuSlide(){
 }
 
 
-function settingsMenuSlide(){
+function toolboxSlide(){
   var tools = document.getElementById("tools");
   var sitemenubtn = document.getElementById("sitemenuBtn");
   var drawer = document.getElementById("drawer");
@@ -217,9 +217,9 @@ function drawTile(label,desc,h,w,id,image,type,author,path,date,likes,comments) 
 	$(tile).data("tileState",0);
 
 	$(tile).mouseover(function() {
-		$(this).children("div.tile-cover-title").css("opacity", "0.8");
+		$(this).children("div.tile-cover-title").css("opacity", "1");
 		$(this).children("div.tile-cover-title").css("top", "1em");
-		$(this).children("div.tile-cover-type").css("opacity", "0.8");
+		$(this).children("div.tile-cover-type").css("opacity", "1");
 		$(this).children("div.tile-cover-type").css("top", "4em");
 	});
 	$(tile).mouseout(function() {
@@ -229,7 +229,7 @@ function drawTile(label,desc,h,w,id,image,type,author,path,date,likes,comments) 
 		$(this).children("div.tile-cover-type").css("top", "2.5em");
 	});
 	$(tile).click(function() {
-		window.open(path);
+		window.open(path, "_self");
 	});
 }
 
@@ -244,8 +244,13 @@ function searchAction(){
 }
 
 
+////////////////////////////////////////////////////////////////
+////////// FORMS
+////////////////////////////////////////////////////////////////
 
-
+function closeForm(){
+	//console.log("close me");
+}
 
 
 

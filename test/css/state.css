@@ -1,0 +1,80 @@
+@media only screen and (min-width: 280px) {
+  .sitelogo_wrapper .site_menu {
+    display: none; }
+
+  .form-wrapper {
+    width: 20em; }
+    .form-wrapper h1 {
+      font-size: 1.35em; }
+    .form-wrapper p {
+      font-size: 1em; }
+    .form-wrapper input[type=text], .form-wrapper textarea {
+      width: 18em; }
+    .form-wrapper input[type=submit] {
+      width: 18em; }
+    .form-wrapper .regform-terms-wrapper {
+      width: 18em; }
+    .form-wrapper .form-signin-btn-wrapper {
+      width: 18em; }
+      .form-wrapper .form-signin-btn-wrapper .signin-lost {
+        font-size: 1em; } }
+@media only screen and (min-width: 620px) {
+  .sitelogo_wrapper .site_menu {
+    display: none; }
+
+  .form-wrapper {
+    width: 20em; }
+    .form-wrapper h1 {
+      font-size: 1.35em; }
+    .form-wrapper p {
+      font-size: 1em; }
+    .form-wrapper input[type=text], .form-wrapper textarea {
+      width: 18em; }
+    .form-wrapper input[type=submit] {
+      width: 18em; }
+    .form-wrapper .regform-terms-wrapper {
+      width: 18em; }
+    .form-wrapper .form-signin-btn-wrapper {
+      width: 18em; }
+      .form-wrapper .form-signin-btn-wrapper .signin-lost {
+        font-size: 1em; } }
+@media only screen and (min-width: 920px) {
+  .sitelogo_wrapper .site_menu {
+    display: inline-block; }
+
+  .form-wrapper {
+    width: 30em; }
+    .form-wrapper h1 {
+      font-size: 1.5em; }
+    .form-wrapper p {
+      font-size: 1.25em; }
+    .form-wrapper input[type=text], .form-wrapper textarea {
+      width: 25em; }
+    .form-wrapper input[type=submit] {
+      width: 25em; }
+    .form-wrapper .regform-terms-wrapper {
+      width: 25em; }
+    .form-wrapper .form-signin-btn-wrapper {
+      width: 25em; }
+      .form-wrapper .form-signin-btn-wrapper .signin-lost {
+        font-size: 1.15em; } }
+@media only screen and (min-width: 1400px) {
+  .sitelogo_wrapper .site_menu {
+    display: inline-block; }
+
+  .form-wrapper {
+    width: 30em; }
+    .form-wrapper h1 {
+      font-size: 1.5em; }
+    .form-wrapper p {
+      font-size: 1.25em; }
+    .form-wrapper input[type=text], .form-wrapper textarea {
+      width: 25em; }
+    .form-wrapper input[type=submit] {
+      width: 25em; }
+    .form-wrapper .regform-terms-wrapper {
+      width: 25em; }
+    .form-wrapper .form-signin-btn-wrapper {
+      width: 25em; }
+      .form-wrapper .form-signin-btn-wrapper .signin-lost {
+        font-size: 1.15em; } }

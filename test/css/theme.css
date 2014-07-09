@@ -179,6 +179,9 @@ tr.even {
 .tile-label {
   background: #e1e2e9; }
 
+.tile-label .icomoon {
+  color: #35b5eb; }
+
 .subnav_wrapper .icomoon {
   color: white; }
 
@@ -224,10 +227,10 @@ tr.even {
   color: #002b53; }
 
 .tile-cover-title {
-  background: #002b53; }
+  background: #3f67c0; }
 
 .tile-cover-type {
-  background: #002b53; }
+  background: #3f67c0; }
 
 .tile-desc {
   background: #e1e2e9; }
@@ -253,3 +256,27 @@ tr.even {
 
 .searchinput {
   color: #999; }
+
+.form-wrapper {
+  background: #3f67c0; }
+
+.form-wrapper .icomoon:hover {
+  color: #002b53; }
+
+.form-wrapper input[type=submit] {
+  background: #35b5eb; }
+
+.form-wrapper input[type=submit]:hover {
+  background: #002b53; }
+
+.form-wrapper a:hover {
+  color: #002b53; }
+
+/*
+#email {
+    background-image: url("../images/mail.png");
+    background-position: 7px 7px;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+}
+*/

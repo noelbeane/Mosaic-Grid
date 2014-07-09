@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>MOSAIC GRID :: PAGE TEMPLATE</title>
+  <title>MOSAIC GRID :: REGISTRATION FORM</title>
   <script type="text/javascript" src="components/jquery/jquery.js"></script>
   <script type="text/javascript" src="components/modernizr/modernizr.js"></script>
   <script type="text/javascript" src="components/jquery-ui/ui/jquery-ui.js"></script>
@@ -91,8 +91,25 @@
 	<!-- //////////////////////// START MAIN ///////////////////////// -->
 	<div id="main-wrapper" class="clearfix">
     	<div id="main" class="clearfix">
-			<div class="main_content_wrapper tranz_norm" id="mainContent">	   	
-				<div class="demo_message">This is a section page.</div>
+			<div class="main_content_wrapper tranz_norm" id="mainContent">
+				<div class="form-wrapper">
+				  <div class="form-close-btn"><div class="icon-x icomoon tranz_norm" onclick="closeForm();"></div></div>
+				  <h1>Create Account</h1>
+				  <p>Already have an account? <a class="tranz_norm" href="signin.html">Sign In</a></p>
+				  <form id="registration_form" action="">
+				    <input id="email" type="text" placeholder="Email" required />
+				    <input id="password" type="text" placeholder="Password" required />
+				    <input id="confirm_password" type="text" placeholder="Confirm Password" required />
+				    <div class="regform-terms-wrapper">				      
+				      <div class="form-checkbox">
+	              <input type="checkbox" value="None" id="form-checkbox" name="check" />
+	              <label for="form-checkbox"></label>
+              </div>
+              <div class="form-checkbox-copy">I accept the <a class="tranz_norm" href="">Terms of Use</a></div>
+				    </div>
+				    <input type="submit" value="Submit" class="tranz_norm">
+				  </form>
+				</div>				
 			</div>
     	</div>
 	</div>

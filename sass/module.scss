@@ -36,12 +36,13 @@
 
 .demo_message {
   width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1em;
-  text-align: center; }
-  .demo_message a {
-    font-weight: 500; }
+  margin: 1em auto;
+  text-align: center;
+}
+  
+.demo_message a {
+  font-weight: 500; 
+}
 
 .preloader {
   background-repeat: no-repeat; }
@@ -66,14 +67,20 @@
   margin: 0 auto;
   width: 10%;
   height: 3.5em;
-  cursor: pointer; }
-  .menubtn_wrapper .icomoon {
+  cursor: pointer; 
+
+  .icomoon {
     font-size: 1.75em;
     cursor: pointer;
     padding: 0;
-    margin: 0.5em 0 0 1em; }
-  .menubtn_wrapper .icomoon:hover {
-    color: #666666; }
+    margin: 0.5em 0 0 1em; 
+  }
+    
+  .icomoon:hover {
+    color: #666666; 
+  }
+
+}
 
 .sitelogo_wrapper {
   display: block;
@@ -83,13 +90,44 @@
   height: 3.5em;
   width: 80%;
   text-align: center;
-}
+  
+  .sitelogo {
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding-top: 0.35em;
+    
+    a {
+	    color: white;
+    }
+  }
+  
+  .site_menu {
+	  display: inline-block;
+    box-sizing: border-box;
+    
+    li {
+	    display: inline-block;
+      box-sizing: border-box;
+      margin: 0 0.5em;
+      
+      a {
+	      font-weight: 100;
+      }
+      
+      a:hover {
+		    color: $clr-primary;
+	    }
+    }
+    
+    li:after {
+	    content: "|";
+	    padding-left: 1.25em;
+	    color: white;
+	    opacity: 0.15;
+    }
+  }
 
-.sitelogo {
-  display: inline-block;
-  box-sizing: border-box;
-  margin: 0 auto;
-  padding-top: 0.35em; 
 }
 
 .toolbox_wrapper {
@@ -100,7 +138,30 @@
   margin: 0;
   width: 10%;
   height: 3.5em;
-  cursor: pointer; }
+  cursor: pointer; 
+  
+  .toolboxBtn {
+    padding: 0;
+    margin: 0.9em 3em 0 0;
+    cursor: pointer;
+    text-align: right; 
+  }
+
+  .icoframe {
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+    height: 2em;
+    width: 2em;
+    margin: 0.15em 0 0 1em; 
+  }
+
+  .icomoon {
+    font-size: 1.75em;
+    cursor: pointer;
+  } 
+  
+}
   
 .searchbox_wrapper {
   box-sizing: border-box;
@@ -370,24 +431,6 @@
   margin: 0;
   cursor: pointer; }
 
-.toolboxBtn {
-  padding: 0;
-  margin: 0.9em 3em 0 0;
-  cursor: pointer;
-  text-align: right; }
-
-.toolbox_wrapper .icoframe {
-  -webkit-border-radius: 2em;
-  -moz-border-radius: 2em;
-  border-radius: 2em;
-  height: 2em;
-  width: 2em;
-  margin: 0.15em 0 0 1em; }
-
-.toolbox_wrapper .icomoon {
-  font-size: 1.75em;
-  cursor: pointer; }
-
 .mainnavList {
   display: none;
   overflow: auto; }
@@ -570,7 +613,6 @@ ul.links li a:hover {
 	  width: 2em;
 	  height: 100%;
 	  padding-top: 0.5em;
-	  color: $clr-tertiary;
 	  font-size: 1.25em;
   }
   
@@ -642,3 +684,206 @@ ul.links li a:hover {
     -webkit-margin-end: 0;
   }
 }
+
+
+////////////////////////////////////////////////////////
+/////   FORM ELEMENTS
+////////////////////////////////////////////////////////
+
+.form-wrapper {
+	display: block;
+	box-sizing: border-box;
+	
+	width: 30em;
+	margin: 3em auto;
+	padding: 0.5em 0.5em 3em 0.5em;
+	
+	.form-close-btn {
+		display: block;
+	  box-sizing: border-box;
+	  float: right;
+	  width: 2em;
+	  height: 2em;
+	}
+	
+	h1 {
+		display: block;
+	  box-sizing: border-box;
+	  text-transform: uppercase;
+		font-size: 1.5em;
+		margin: 1em auto 0 auto;
+		text-align: center;
+	}
+	
+	p {
+		color: white;
+		font-weight: 100;
+		font-size: 1.25em;
+	}
+	
+	.icomoon {
+		color: white;
+		font-size: 1em;
+		padding: 0.5em;
+		cursor: pointer;
+	}
+	
+	input[type=text], textarea {
+	  display: block;
+	  box-sizing: border-box;
+	  font-weight: 100;
+	  font-size: 0.9em;
+	  width: 25em;
+	  padding: 0.75em;
+	  margin: 1.75em auto;
+	  border: 0;
+	}
+	
+	textarea {
+		height: 10em;
+	}
+	
+	input[type=submit] {
+		display: block;
+	  box-sizing: border-box;
+	  font-weight: 100;
+	  font-size: 0.9em;
+	  width: 25em;
+	  padding: 1.5em 1em;
+	  margin: 1.75em auto;	  
+	  border: 0;
+	  color: white;
+	}
+	
+	.regform-terms-wrapper {
+		display: block;
+	  box-sizing: border-box;
+	  font-weight: 100;
+	  font-size: 0.9em;
+	  width: 25em;
+	  padding: 0;
+	  margin: 0 auto;
+	  color: white;
+	  text-align: left;
+	  
+	  input[type=submit] {
+		  display: block;
+	    box-sizing: border-box;
+	    font-weight: 100;
+	    font-size: 0.9em;
+	    width: 100%;
+	    padding: 1.35em;
+	    margin: 1.75em 0;
+	    border: 0;
+	    color: white;
+	  }
+	  
+	  input[type=checkbox] {
+		  visibility: hidden;
+	  }
+	}
+	.form-signin-btn-wrapper {
+		display: block;
+	  box-sizing: border-box;
+	  font-weight: 100;
+	  font-size: 0.9em;
+	  width: 25em;
+	  padding: 0;
+	  margin: 1.75em auto;
+	  border: 0;
+	  overflow: auto;
+		
+		.signin-btn {
+			display: block;
+			box-sizing: border-box;
+			float: left;
+			width: 40%;
+			text-align: left;
+			
+			input[type=submit] {
+	      width: 100%;
+	      padding: 1em;
+	      margin: 0;
+	    }
+		}
+		
+		.signin-lost {
+			display: block;
+			box-sizing: border-box;
+			float: left;
+			width: 60%;
+			padding: 0.8em 0 0 1.5em;
+			text-align: left;
+			font-size: 1.15em;
+		}
+	}
+}
+
+.form-checkbox {
+	display: block;
+	box-sizing: border-box;
+	float: left;
+	width: 24px;
+	height: 24px;
+	background: $clr-tertiary;
+	margin: 0;
+	position: relative;
+}
+
+.form-checkbox label {
+	cursor: pointer;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	left: 2px;
+	top: 2px;
+	background: $clr-secondary;
+}
+
+.form-checkbox label:after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+	content: '';
+	position: absolute;
+	width: 9px;
+	height: 5px;
+	background: transparent;
+	top: 4px;
+	left: 4px;
+	border: 3px solid #fcfff4;
+	border-top: none;
+	border-right: none;
+
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.form-checkbox label:hover::after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+	filter: alpha(opacity=30);
+	opacity: 0.3;
+}
+
+.form-checkbox input[type=checkbox]:checked + label:after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+
+.form-checkbox-copy {
+	display: block;
+	box-sizing: border-box;
+	padding-top: 0.25em;
+	margin-left: 35px;
+	font-weight: 300;
+	font-size: 1em;
+}
+
+
+
+
+

@@ -21,11 +21,11 @@
 	        <div class="menu-icon" onclick="searchAction();"><div class="icon-search icomoon"></div></div>
 	      </form>
 	    </li>
-	    <li class="tranz_norm"><div class="menu-label">home</div><div class="menu-icon"><div class="icon-chevron2 icomoon"></div></div></li>
-	    <li class="tranz_norm"><div class="menu-label">about</div><div class="menu-icon"><div class="icon-chevron2 icomoon"></div></div></li>
-	    <li class="tranz_norm"><div class="menu-label">work</div><div class="menu-icon"><div class="icon-chevron2 icomoon"></div></div></li>
-	    <li class="tranz_norm"><div class="menu-label">blog</div><div class="menu-icon"><div class="icon-chevron2 icomoon"></div></div></li>
-	    <li class="tranz_norm"><div class="menu-label">contact</div><div class="menu-icon"><div class="icon-chevron2 icomoon"></div></div></li>
+	    <li class="tranz_norm" onclick="javascript:window.open('page.html','_self');"><div class="menu-label">home</div><div class="menu-icon"><div class="icon-chevron2 icomoon"></div></div></li>
+	    <li class="tranz_norm" onclick="javascript:window.open('page.html','_self');"><div class="menu-label">about</div><div class="menu-icon"><div class="icon-chevron2 icomoon"></div></div></li>
+	    <li class="tranz_norm" onclick="javascript:window.open('page.html','_self');"><div class="menu-label">work</div><div class="menu-icon"><div class="icon-chevron2 icomoon"></div></div></li>
+	    <li class="tranz_norm" onclick="javascript:window.open('page.html','_self');"><div class="menu-label">blog</div><div class="menu-icon"><div class="icon-chevron2 icomoon"></div></div></li>
+	    <li class="tranz_norm" onclick="javascript:window.open('contact.html','_self');"><div class="menu-label">contact</div><div class="menu-icon"><div class="icon-chevron2 icomoon"></div></div></li>
 	  </ul>
 	</div>
 	<div class="menu-socnet-container tranz_norm">
@@ -54,10 +54,18 @@
 					<div class="icon-menu icomoon tranz_norm"></div>
 				</div>
 				<div class="sitelogo_wrapper" id="sitelogo">
-					<div class="sitelogo"><h1>Mosaic Grid</h1></div>						
+					<div class="sitelogo"><h1><a class="" href="index.html">Mosaic Grid</a></h1></div>
+					<div class="site_menu">
+						<ul>
+						  <li><a class="tranz_norm" href="page.html">About</a></li>
+						  <li><a class="tranz_norm" href="page.html">Work</a></li>
+						  <li><a class="tranz_norm" href="page.html">Blog</a></li>
+						  <li><a class="tranz_norm" href="contact.html">Contact</a></li>
+						</ul>						
+					</div>
 				</div>
 				<div class="toolbox_wrapper" id="toolbox">
-					<div class="toolboxBtn" id="toolboxBtn" onclick="settingsMenuSlide();">
+					<div class="toolboxBtn" id="toolboxBtn" onclick="toolboxSlide();">
 						<div class="icon-cog icomoon tranz_norm"></div>
 					</div>
 				</div>		

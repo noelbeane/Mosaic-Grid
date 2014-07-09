@@ -12,23 +12,135 @@
 // MEDIA QUERY  -  SMALL
 /////////////////////////////////////////
 @media only screen and (min-width: 280px) {
-  
+  .sitelogo_wrapper {
+    .site_menu {
+      display: none;
+    }
+  }
+  .form-wrapper {
+    width: 20em;
+    h1 {
+	    font-size: 1.35em;
+    }
+    p {
+	    font-size: 1em;
+    }
+    input[type=text], textarea {
+      width: 18em;
+    }
+    input[type=submit] {
+      width: 18em;
+    }
+    .regform-terms-wrapper {
+      width: 18em;
+    }
+    .form-signin-btn-wrapper {
+      width: 18em;
+      .signin-lost {
+        font-size: 1em;
+      }
+    }
+  }
 }
 //////////////////////////////////////////
 // MEDIA QUERY  -  MEDIUM
 /////////////////////////////////////////
 @media only screen and (min-width: 620px) {
-  
+  .sitelogo_wrapper {
+    .site_menu {
+      display: none;
+    }
+  }
+  .form-wrapper {
+    width: 20em;
+    h1 {
+	    font-size: 1.35em;
+    }
+    p {
+	    font-size: 1em;
+    }
+    input[type=text], textarea {
+      width: 18em;
+    }
+    input[type=submit] {
+      width: 18em;
+    }
+    .regform-terms-wrapper {
+      width: 18em;
+    }
+    .form-signin-btn-wrapper {
+      width: 18em;
+      .signin-lost {
+        font-size: 1em;
+      }
+    }
+  }
 }
 //////////////////////////////////////////
 // MEDIA QUERY  -  LARGE
 /////////////////////////////////////////
 @media only screen and (min-width: 920px) { 
-    
+  .sitelogo_wrapper {
+    .site_menu {
+      display: inline-block;
+    }
+  }
+  .form-wrapper {
+    width: 30em;
+    h1 {
+	    font-size: 1.5em;
+    }
+    p {
+	    font-size: 1.25em;
+    }
+    input[type=text], textarea {
+      width: 25em;
+    }
+    input[type=submit] {
+      width: 25em;
+    }
+    .regform-terms-wrapper {
+      width: 25em;
+    }
+    .form-signin-btn-wrapper {
+      width: 25em;
+      .signin-lost {
+        font-size: 1.15em;
+      }
+    }
+  }
 }
 //////////////////////////////////////////
 // MEDIA QUERY  -  X-LARGE
 /////////////////////////////////////////
 @media only screen and (min-width: 1400px) { 
-  
+  .sitelogo_wrapper {
+    .site_menu {
+      display: inline-block;
+    }
+  }
+  .form-wrapper {
+    width: 30em;
+    h1 {
+	    font-size: 1.5em;
+    }
+    p {
+	    font-size: 1.25em;
+    }
+    input[type=text], textarea {
+      width: 25em;
+    }
+    input[type=submit] {
+      width: 25em;
+    }
+    .regform-terms-wrapper {
+      width: 25em;
+    }
+    .form-signin-btn-wrapper {
+      width: 25em;
+      .signin-lost {
+        font-size: 1.15em;
+      }
+    }
+  }
 }

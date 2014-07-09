@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>MOSAIC GRID :: PAGE TEMPLATE</title>
+  <title>MOSAIC GRID :: SIGN IN FORM</title>
   <script type="text/javascript" src="components/jquery/jquery.js"></script>
   <script type="text/javascript" src="components/modernizr/modernizr.js"></script>
   <script type="text/javascript" src="components/jquery-ui/ui/jquery-ui.js"></script>
@@ -91,8 +91,20 @@
 	<!-- //////////////////////// START MAIN ///////////////////////// -->
 	<div id="main-wrapper" class="clearfix">
     	<div id="main" class="clearfix">
-			<div class="main_content_wrapper tranz_norm" id="mainContent">	   	
-				<div class="demo_message">This is a section page.</div>
+			<div class="main_content_wrapper tranz_norm" id="mainContent">
+				<div class="form-wrapper">
+				  <div class="form-close-btn"><div class="icon-x icomoon tranz_norm" onclick="closeForm();"></div></div>
+				  <h1>Sign In</h1>
+				  <form id="signin_form" action="">
+				    <input id="email" type="text" placeholder="Email" required />
+				    <input id="password" type="text" placeholder="Password" required />
+				    <!--<input type="submit" value="Sign In" class="tranz_norm">-->
+				    <div class="form-signin-btn-wrapper">
+					    <div class="signin-btn"><input type="submit" value="Sign In" class="tranz_norm"></div>
+					    <div class="signin-lost"><a class="tranz_norm" href="">Lost Your Password?</a></div>
+				    </div>
+				  </form>
+				</div>				
 			</div>
     	</div>
 	</div>
