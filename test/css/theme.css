@@ -280,3 +280,14 @@ tr.even {
     background-size: 24px 24px;
 }
 */
+.section-page a:hover {
+  color: #0e112a; }
+
+.section-page-breadcrumb a:hover {
+  color: #0e112a; }
+
+.object-detail-left {
+  background: #002b53; }
+
+.object-detail-right {
+  background: #002b53; }

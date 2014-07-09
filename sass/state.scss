@@ -41,6 +41,15 @@
       }
     }
   }
+  .object-detail-table {
+	  display: none;
+	}
+	.object-detail-divs {
+	  display: block;
+	}
+	.breadcrumb {
+	  display: none;
+	}
 }
 //////////////////////////////////////////
 // MEDIA QUERY  -  MEDIUM
@@ -75,6 +84,15 @@
       }
     }
   }
+  .object-detail-table {
+	  display: none;
+	}
+	.object-detail-divs {
+	  display: block;
+	}
+	.breadcrumb {
+	  display: none;
+	}
 }
 //////////////////////////////////////////
 // MEDIA QUERY  -  LARGE
@@ -109,6 +127,15 @@
       }
     }
   }
+  .object-detail-table {
+	  display: block;
+	}
+	.object-detail-divs {
+	  display: none;
+	}
+	.breadcrumb {
+	  display: none;
+	}
 }
 //////////////////////////////////////////
 // MEDIA QUERY  -  X-LARGE
@@ -143,4 +170,19 @@
       }
     }
   }
+  .object-detail-table {
+	  display: block;
+	}
+	.object-detail-divs {
+	  display: none;
+	}
+	.breadcrumb {
+	  display: none;
+	}
 }
+
+
+
+
+
+

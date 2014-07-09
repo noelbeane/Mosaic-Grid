@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>MOSAIC GRID :: DETAIL TEMPLATE</title>
+  <title>MOSAIC GRID :: OBJECT TEMPLATE</title>
   <script type="text/javascript" src="components/jquery/jquery.js"></script>
   <script type="text/javascript" src="components/modernizr/modernizr.js"></script>
   <script type="text/javascript" src="components/jquery-ui/ui/jquery-ui.js"></script>
@@ -90,11 +90,84 @@
 
 	<!-- //////////////////////// START MAIN ///////////////////////// -->
 	<div id="main-wrapper" class="clearfix">
-    	<div id="main" class="clearfix">
+    	<!--<div id="main" class="clearfix">-->
 			<div class="main_content_wrapper tranz_norm" id="mainContent">	   	
-				<div class="demo_message">This is a detail page.</div>
+				<div class="breadcrumb">
+				  <ul>
+				    <li><a class="tranz_norm" href="index.html">home</a></li>
+				    <li><a class="tranz_norm" href="">Group</a></li>
+				    <li>Object Title Lorem Ipsum</li>
+				  </ul>
+				</div>
+				<!-- /////////////////////  TABLE LAYOUT ////////////////////////// -->
+				<div class="object-detail-table">
+				  <table>
+				    <tr>
+				      <td class="object-detail-left">
+					      <div class="object-detail-image">image</div>
+					      <div class="object-detail-comments">comments</div>
+				      </td>
+				      <td class="object-detail-right">
+					      <div class="object-detail-right-title">Object Title Lorem Ipsum</div>
+					      <div class="object-detail-right-count">						      
+						      <div class="object-count"><div class='icomoon'><div class='icon-bubble'></div></div><div class='count'>12</div></div>
+						      <div class="object-count"><div class='icomoon'><div class='icon-heart'></div></div><div class='count'>6</div></div>						      
+					      </div>
+					      <div class="object-detail-right-desc">
+						      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+					      </div>
+					      <div class="object-detail-right-like">
+						      <div class="like-btn tranz_norm">Like</div>
+					      </div>
+					      <div class="object-detail-right-links">
+						      <div class="link-label">URL:</div>
+						      <div class="link-url"><a class="tranz_norm" href="">http://www.google.com</a></div>
+					      </div>
+					      <div class="object-detail-right-tags">
+						      <div class="object-tag tranz_norm">test</div>
+						      <div class="object-tag tranz_norm">Lorem Ipsum</div>
+						      <div class="object-tag tranz_norm">Dolor</div>
+						      <div class="object-tag tranz_norm">Lorem Ipsum</div>
+						      <div class="object-tag tranz_norm">Dolor</div>
+					      </div>
+				      </td>
+				    </tr>
+				  </table>
+				</div>				
+				
+				<!-- /////////////////////  DIV LAYOUT ////////////////////////// -->
+				<div class="object-detail-divs">
+				  <div class="object-detail-image">image</div>
+					<div class="object-detail-desc">						
+						<div class="object-detail-title">Object Title Lorem Ipsum</div>
+					    <div class="object-detail-count">						      
+						    <div class="object-count"><div class='icomoon'><div class='icon-bubble'></div></div><div class='count'>12</div></div>
+						    <div class="object-count"><div class='icomoon'><div class='icon-heart'></div></div><div class='count'>6</div></div>						      
+					    </div>
+					    <div class="object-detail-desc">
+						      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+					    </div>
+					    <div class="object-detail-like">
+						    <div class="like-btn tranz_norm">Like</div>
+					    </div>
+					    <div class="object-detail-links">
+						    <div class="link-label">URL:</div>
+						    <div class="link-url"><a class="tranz_norm" href="">http://www.google.com</a></div>
+					    </div>
+					    <div class="object-detail-tags">
+						    <div class="object-tag tranz_norm">test</div>
+						    <div class="object-tag tranz_norm">Lorem Ipsum</div>
+						    <div class="object-tag tranz_norm">Dolor</div>
+						    <div class="object-tag tranz_norm">Lorem Ipsum</div>
+						    <div class="object-tag tranz_norm">Dolor</div>
+					    </div>						
+					</div>
+					<div class="object-detail-comments">comments</div>		  
+				</div>
+				
+				
 			</div>
-    	</div>
+    	<!--</div>-->
 	</div>
 	<!-- //////////////////////// END MAIN ///////////////////////// -->
 

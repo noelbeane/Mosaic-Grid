@@ -44,6 +44,67 @@
   font-weight: 500; 
 }
 
+.section-page {
+  display: block;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 1em auto;
+  text-align: left;
+  
+  h1 {
+	  font-weight: 100;
+	  font-size: 1.35em;
+	  margin: 2em 0 1.5em 0;
+	  text-transform: uppercase;
+	  
+  }
+  
+  p {
+	  font-weight: 100;
+	  font-size: 0.9em;
+	  line-height: 2em;
+	  letter-spacing: 0.125em;
+  }
+  
+  a {
+    font-weight: 500; 
+  }
+}
+
+.breadcrumb {
+  box-sizing: border-box;
+  width: 80%;
+  margin: 1em auto;
+  text-align: left;
+  
+  ul, menu, dir {
+	  list-style-type: none;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
+  }
+  
+  li {
+	    display: inline-block;
+      box-sizing: border-box;
+      margin-right: 0.5em;
+      color: white;
+      
+      a {
+	      font-weight: 100;
+      }
+    }
+    
+    li:after {
+	    content: "|";
+	    padding-left: 1.25em;
+	    color: white;
+	    opacity: 0.15;
+    }
+}
+
 .preloader {
   background-repeat: no-repeat; }
 
@@ -365,7 +426,10 @@
   box-sizing: border-box;
   text-align: center;
   overflow: auto;
-  width: 100%; }
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
 
 .socnet_wrapper {
   width: 8.33333%;
@@ -882,6 +946,306 @@ ul.links li a:hover {
 	font-weight: 300;
 	font-size: 1em;
 }
+
+
+////////////////////////////////////////////////////////
+/////   OBJECT DETAILS PAGE
+////////////////////////////////////////////////////////
+
+.object-detail-table {
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 auto;
+	padding: 0;
+	text-align: left;
+	color: white;
+	
+	table {
+	  width: 100%;
+		padding: 0;
+		margin: 0;
+		text-align: left;
+		 
+		.object-detail-left {
+	    padding: 0;
+	    width: 70%;
+	    
+	    .object-detail-image {
+		    display: block;
+	      box-sizing: border-box;
+	      width: 100%;
+	      background: green;
+	      height: 20em;
+	    }
+	    .object-detail-comments {
+		    display: block;
+	      box-sizing: border-box;
+	      width: 100%;
+	      background: white;
+	      height: 20em;
+	      color: #666;
+	      padding: 1em;
+	    }
+    }
+    
+    .object-detail-right {
+	    padding: 0 1em;
+	    width: 30%;
+	    background: $clr-secondary;
+	    vertical-align: top;
+	    
+	    .object-detail-right-title {
+		    font-weight: 300;
+		    font-size: 1.25em;
+		    margin: 1em 0;
+	    }
+	    
+	    .object-detail-right-count {
+		    font-weight: 100;
+		    font-size: 1em;
+		    margin: 1em 0;
+		    
+		    .object-count {
+			    display: inline-block;
+	        box-sizing: border-box;
+	        margin-right: 2em;
+	        
+	        .icomoon {
+		        display: inline-block;
+	          box-sizing: border-box;
+	          margin-right: 0.5em;
+	          color: $clr-tertiary;
+	        }
+	        
+	        .count {
+		        display: inline-block;
+	          box-sizing: border-box;
+	        }
+		    }
+	    }
+	    
+	    .object-detail-right-desc {
+		    font-weight: 100;
+		    font-size: 0.9em;
+		    line-height: 1.25em;
+		    letter-spacing: 0.12em;
+		    margin: 2em 0;
+	    }
+	    
+	    .object-detail-right-like {
+		    margin: 2em 0;
+		    
+		    .like-btn {
+			    display: block;
+	        box-sizing: border-box;
+	        width: 8em;
+	        padding: 1em;
+	        background: $clr-tertiary;
+	        clear: both;
+	        cursor: pointer;
+	        text-align: center;
+		    }
+		    .like-btn:hover {
+		      background: $clr-primary;
+		    }
+	    }
+	    
+	    .object-detail-right-links {
+		    font-weight: 100;
+		    font-size: 1em;
+		    margin: 1em 0;
+		    
+		    .link-label {
+			    display: block;
+	        box-sizing: border-box;
+	        padding-top: 1em;
+	        width: 100%;
+	        border-top: 1px solid rgba(255, 255, 255, .25);
+		    }
+		    
+		    .link-url {
+			    display: block;
+	        box-sizing: border-box;
+	        padding-top: 1em;
+	        width: 100%;
+	        
+	        a:hover {
+		        color: $clr-primary;
+	        }
+		    }
+	    }
+	    
+	    .object-detail-right-tags {
+		    margin: 2em 0;
+		    padding-top: 1em;
+	      width: 100%;
+	      border-top: 1px solid rgba(255, 255, 255, .25);
+	      
+	      .object-tag {
+		      display: block;
+	        box-sizing: border-box;
+	        float: left;
+	        background: $clr-tertiary;
+	        margin-right: 0.35em;
+	        margin-bottom: 0.35em;
+	        padding: 0.5em;
+	        cursor: pointer;
+	      }
+	      
+	      .object-tag:hover {
+		      background: $clr-primary;
+	      }
+	    }
+    }
+	}
+}
+
+.object-detail-divs {
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 auto;
+	padding: 0;
+	text-align: left;
+	color: white;
+	
+	.object-detail-image {
+		display: block;
+	  box-sizing: border-box;
+	  width: 100%;
+	  background: green;
+	  height: 20em;
+	}
+	    
+	.object-detail-desc {
+		display: block;
+	  box-sizing: border-box;
+	  width: 100%;
+	  background: white;
+	  padding: 1em;	  
+	  
+	  .object-detail-title {
+		    font-weight: 300;
+		    font-size: 1.25em;
+		    margin: 1em 0;
+		    color: #666;
+	    }
+	    
+	    .object-detail-count {
+		    font-weight: 100;
+		    font-size: 1em;
+		    margin: 1em 0;
+		    color: #666;
+		    
+		    .object-count {
+			    display: inline-block;
+	        box-sizing: border-box;
+	        margin-right: 2em;
+	        
+	        .icomoon {
+		        display: inline-block;
+	          box-sizing: border-box;
+	          margin-right: 0.5em;
+	          color: $clr-tertiary;
+	        }
+	        
+	        .count {
+		        display: inline-block;
+	          box-sizing: border-box;
+	          color: #ccc;
+	        }
+		    }
+	    }
+	    
+	    .object-detail-desc {
+		    font-weight: 100;
+		    font-size: 0.9em;
+		    line-height: 1.25em;
+		    letter-spacing: 0.12em;
+		    margin: 2em 0;
+		    color: #666;
+		    overflow: auto;
+		    padding: 0;
+	    }
+	    
+	    .object-detail-like {
+		    margin: 2em 0;
+		    
+		    .like-btn {
+			    display: block;
+	        box-sizing: border-box;
+	        width: 8em;
+	        padding: 1em;
+	        background: $clr-tertiary;
+	        clear: both;
+	        cursor: pointer;
+	        text-align: center;
+		    }
+		    .like-btn:hover {
+		      background: $clr-primary;
+		    }
+	    }
+	    
+	    .object-detail-links {
+		    font-weight: 100;
+		    font-size: 1em;
+		    margin: 1em 0;
+		    
+		    .link-label {
+			    display: block;
+	        box-sizing: border-box;
+	        padding-top: 1em;
+	        width: 100%;
+	        border-top: 1px solid rgba(0, 0, 0, .25);
+	        color: #666;
+		    }
+		    
+		    .link-url {
+			    display: block;
+	        box-sizing: border-box;
+	        padding-top: 1em;
+	        width: 100%;
+	        
+	        a:hover {
+		        color: $clr-primary;
+	        }
+		    }
+	    }
+	    
+	    .object-detail-tags {
+		    margin: 2em 0;
+		    padding-top: 1em;
+	      width: 100%;
+	      border-top: 1px solid rgba(0, 0, 0, .25);
+	      
+	      .object-tag {
+		      display: block;
+	        box-sizing: border-box;
+	        float: left;
+	        background: $clr-tertiary;
+	        margin-right: 0.35em;
+	        margin-bottom: 0.35em;
+	        padding: 0.5em;
+	        cursor: pointer;
+	      }
+	      
+	      .object-tag:hover {
+		      background: $clr-primary;
+	      }
+	    }
+	}
+	    
+	.object-detail-comments {
+		display: block;
+	  box-sizing: border-box;
+	  width: 100%;
+	  background: orange;
+	  height: 20em;
+	}
+}
+
+
+
+
 
 
 
