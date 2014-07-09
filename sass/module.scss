@@ -974,8 +974,10 @@ ul.links li a:hover {
 		    display: block;
 	      box-sizing: border-box;
 	      width: 100%;
-	      background: green;
 	      height: 20em;
+	      background: url("../images/test/img_03.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
 	    }
 	    .object-detail-comments {
 		    display: block;
@@ -1248,6 +1250,9 @@ ul.links li a:hover {
 	  width: 100%;
 	  background: green;
 	  height: 20em;
+	  background: url("../images/test/img_03.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 	}
 	    
 	.object-detail-desc {

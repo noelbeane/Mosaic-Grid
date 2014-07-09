@@ -815,8 +815,10 @@ ul.links li a:hover {
         display: block;
         box-sizing: border-box;
         width: 100%;
-        background: green;
-        height: 20em; }
+        height: 20em;
+        background: url("../images/test/img_03.jpg");
+        background-size: cover;
+        background-repeat: no-repeat; }
       .object-detail-table table .object-detail-left .object-detail-comments {
         display: block;
         box-sizing: border-box;
@@ -1021,7 +1023,10 @@ ul.links li a:hover {
     box-sizing: border-box;
     width: 100%;
     background: green;
-    height: 20em; }
+    height: 20em;
+    background: url("../images/test/img_03.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; }
   .object-detail-divs .object-detail-desc {
     display: block;
     box-sizing: border-box;
