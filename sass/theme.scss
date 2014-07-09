@@ -380,6 +380,15 @@ tr.even {
 	background: $clr-primary;
 }
 
+.object-detail-comments input[type=submit] {
+  background: $clr-tertiary;
+}
+
+.object-detail-comments input[type=submit]:hover {
+  background: $clr-primary;
+}
+
+
 
 
 

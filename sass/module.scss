@@ -982,9 +982,140 @@ ul.links li a:hover {
 	      box-sizing: border-box;
 	      width: 100%;
 	      background: white;
-	      height: 20em;
-	      color: #666;
+	      clear: both;
 	      padding: 1em;
+	  
+	      .comments-header {
+		      display: block;
+	        box-sizing: border-box;
+	        width: 100%;
+	        clear: both;    
+	    
+	        .comments-header-avatar {
+		        display: block;
+	          box-sizing: border-box;
+	          float: left;
+	          width: 5em;
+	          height: 5em;
+	          background: url("../images/user.jpg");
+            background-size: contain;
+            background-repeat: no-repeat;
+	        }
+	    
+	        .comments-header-message {
+		        display: block;
+	          box-sizing: border-box;
+	          float: left;
+	          padding-top: 2em;
+	          margin-left: 1em;
+	          text-transform: uppercase;
+	          font-weight: 300;
+	          font-size: 1em;
+	          color: $clr-tertiary;
+	        }
+	      }
+	  
+	      .comments-input {
+		      display: block;
+	        box-sizing: border-box;
+	        width: 100%;
+	        clear: both;
+	        padding: 1em 0;
+	    
+	        input[type=text], textarea {
+	          display: block;
+	          box-sizing: border-box;
+	          font-weight: 100;
+	          font-size: 0.9em;
+	          width: 100%;
+	          padding: 0.75em;
+	          margin: 0 auto;
+	          border: 1px solid #ccc;
+	        }
+	      }
+	  
+	      .comments-submit {
+		      display: block;
+	        box-sizing: border-box;
+	        width: 100%;
+	        clear: both;
+	        margin-bottom: 1em;
+	        overflow: auto; 
+	    
+	        input[type=submit] {
+		        display: block;
+	          box-sizing: border-box;
+	          float: left;
+	          font-weight: 100;
+	          font-size: 0.9em;
+	          width: 12em;
+	          padding: 1em;
+	          margin: 1em auto;
+	          border: 0;
+	          color: white;
+	          cursor: pointer;
+	        }
+	      }
+	  
+	      .comment-post {
+		      display: block;
+	        box-sizing: border-box;
+	        width: 100%;
+	        clear: both;
+	        overflow: auto;
+	        margin: 1em 0;
+	        padding-top: 1em;
+	        border-top: 1px solid rgba(0, 0, 0, .25);
+	        color: #666;
+	        font-size: 0.9em;
+	    
+	        .comment-post-avatar {
+		        display: block;
+	          box-sizing: border-box;
+	          float: left;
+	          width: 10%;
+	          height: 3em;
+	          background: url("../images/user.jpg");
+            background-size: contain;
+            background-repeat: no-repeat;
+	        }
+	    
+	        .comment-post-data {
+		        display: block;
+	          box-sizing: border-box;
+	          float: left;
+	          width: 90%;
+	          padding-left: 0.5em;
+	      
+		        .comment-post-author {
+			        display: block;
+	            box-sizing: border-box;
+	            width: 100%;
+	            clear: both;
+	            color: #333;
+	            font-size: 1em;
+	            font-weight: 500;
+		        }
+		    
+		        .comment-post-date {
+			        display: block;
+	            box-sizing: border-box;
+	            width: 100%;
+	            clear: both;
+	            font-style: italic;
+	            font-size: 0.8em;
+	            margin-bottom: 0.5em;	        
+		        }
+		    
+		        .comment-post-copy {
+			        display: block;
+	            box-sizing: border-box;
+	            width: 100%;
+	            clear: both;
+	            color: #999;
+		        }		    
+	        }
+	      }	  
 	    }
     }
     
@@ -1098,6 +1229,8 @@ ul.links li a:hover {
 	    }
     }
 	}
+	
+	
 }
 
 .object-detail-divs {
@@ -1107,6 +1240,7 @@ ul.links li a:hover {
 	padding: 0;
 	text-align: left;
 	color: white;
+	clear: both;
 	
 	.object-detail-image {
 		display: block;
@@ -1120,21 +1254,20 @@ ul.links li a:hover {
 		display: block;
 	  box-sizing: border-box;
 	  width: 100%;
-	  background: white;
-	  padding: 1em;	  
+	  background: $clr-secondary;
+	  padding: 1em;
+	  overflow: auto;
 	  
 	  .object-detail-title {
 		    font-weight: 300;
 		    font-size: 1.25em;
 		    margin: 1em 0;
-		    color: #666;
 	    }
 	    
 	    .object-detail-count {
 		    font-weight: 100;
 		    font-size: 1em;
 		    margin: 1em 0;
-		    color: #666;
 		    
 		    .object-count {
 			    display: inline-block;
@@ -1151,7 +1284,6 @@ ul.links li a:hover {
 	        .count {
 		        display: inline-block;
 	          box-sizing: border-box;
-	          color: #ccc;
 	        }
 		    }
 	    }
@@ -1162,7 +1294,6 @@ ul.links li a:hover {
 		    line-height: 1.25em;
 		    letter-spacing: 0.12em;
 		    margin: 2em 0;
-		    color: #666;
 		    overflow: auto;
 		    padding: 0;
 	    }
@@ -1195,8 +1326,7 @@ ul.links li a:hover {
 	        box-sizing: border-box;
 	        padding-top: 1em;
 	        width: 100%;
-	        border-top: 1px solid rgba(0, 0, 0, .25);
-	        color: #666;
+	        border-top: 1px solid rgba(255, 255, 255, .25);
 		    }
 		    
 		    .link-url {
@@ -1215,7 +1345,7 @@ ul.links li a:hover {
 		    margin: 2em 0;
 		    padding-top: 1em;
 	      width: 100%;
-	      border-top: 1px solid rgba(0, 0, 0, .25);
+	      border-top: 1px solid rgba(255, 255, 255, .25);
 	      
 	      .object-tag {
 		      display: block;
@@ -1238,8 +1368,141 @@ ul.links li a:hover {
 		display: block;
 	  box-sizing: border-box;
 	  width: 100%;
-	  background: orange;
-	  height: 20em;
+	  background: white;
+	  clear: both;
+	  padding: 1em;
+	  
+	  .comments-header {
+		  display: block;
+	    box-sizing: border-box;
+	    width: 100%;
+	    clear: both;    
+	    
+	    .comments-header-avatar {
+		    display: block;
+	      box-sizing: border-box;
+	      float: left;
+	      width: 5em;
+	      height: 5em;
+	      background: url("../images/user.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+	    }
+	    
+	    .comments-header-message {
+		    display: block;
+	      box-sizing: border-box;
+	      float: left;
+	      padding-top: 2em;
+	      margin-left: 1em;
+	      text-transform: uppercase;
+	      font-weight: 300;
+	      font-size: 1em;
+	      color: $clr-tertiary;
+	    }
+	  }
+	  
+	  .comments-input {
+		  display: block;
+	    box-sizing: border-box;
+	    width: 100%;
+	    clear: both;
+	    padding: 1em 0;
+	    
+	    input[type=text], textarea {
+	      display: block;
+	      box-sizing: border-box;
+	      font-weight: 100;
+	      font-size: 0.9em;
+	      width: 100%;
+	      padding: 0.75em;
+	      margin: 0 auto;
+	      border: 1px solid #ccc;
+	    }
+	  }
+	  
+	  .comments-submit {
+		  display: block;
+	    box-sizing: border-box;
+	    width: 100%;
+	    clear: both;
+	    margin-bottom: 1em;
+	    overflow: auto; 
+	    
+	    input[type=submit] {
+		    display: block;
+	      box-sizing: border-box;
+	      float: left;
+	      font-weight: 100;
+	      font-size: 0.9em;
+	      width: 12em;
+	      padding: 1em;
+	      margin: 1em auto;
+	      border: 0;
+	      color: white;
+	      cursor: pointer;
+	    }
+	  }
+	  
+	  .comment-post {
+		  display: block;
+	    box-sizing: border-box;
+	    width: 100%;
+	    clear: both;
+	    overflow: auto;
+	    margin: 1em 0;
+	    padding-top: 1em;
+	    border-top: 1px solid rgba(0, 0, 0, .25);
+	    color: #666;
+	    font-size: 0.9em;
+	    
+	    .comment-post-avatar {
+		    display: block;
+	      box-sizing: border-box;
+	      float: left;
+	      width: 10%;
+	      height: 3em;
+	      background: url("../images/user.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+	    }
+	    
+	    .comment-post-data {
+		    display: block;
+	      box-sizing: border-box;
+	      float: left;
+	      width: 90%;
+	      padding-left: 0.5em;
+	      
+		    .comment-post-author {
+			    display: block;
+	        box-sizing: border-box;
+	        width: 100%;
+	        clear: both;
+	        color: #333;
+	        font-size: 1em;
+	        font-weight: 500;
+		    }
+		    
+		    .comment-post-date {
+			    display: block;
+	        box-sizing: border-box;
+	        width: 100%;
+	        clear: both;
+	        font-style: italic;
+	        font-size: 0.8em;
+	        margin-bottom: 0.5em;	        
+		    }
+		    
+		    .comment-post-copy {
+			    display: block;
+	        box-sizing: border-box;
+	        width: 100%;
+	        clear: both;
+	        color: #999;
+		    }		    
+	    }
+	  }	  
 	}
 }
 

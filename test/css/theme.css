@@ -291,3 +291,9 @@ tr.even {
 
 .object-detail-right {
   background: #002b53; }
+
+.object-detail-comments input[type=submit] {
+  background: #35b5eb; }
+
+.object-detail-comments input[type=submit]:hover {
+  background: #002b53; }

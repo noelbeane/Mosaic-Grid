@@ -822,9 +822,114 @@ ul.links li a:hover {
         box-sizing: border-box;
         width: 100%;
         background: white;
-        height: 20em;
-        color: #666;
+        clear: both;
         padding: 1em; }
+        .object-detail-table table .object-detail-left .object-detail-comments .comments-header {
+          display: block;
+          box-sizing: border-box;
+          width: 100%;
+          clear: both; }
+          .object-detail-table table .object-detail-left .object-detail-comments .comments-header .comments-header-avatar {
+            display: block;
+            box-sizing: border-box;
+            float: left;
+            width: 5em;
+            height: 5em;
+            background: url("../images/user.jpg");
+            background-size: contain;
+            background-repeat: no-repeat; }
+          .object-detail-table table .object-detail-left .object-detail-comments .comments-header .comments-header-message {
+            display: block;
+            box-sizing: border-box;
+            float: left;
+            padding-top: 2em;
+            margin-left: 1em;
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 1em;
+            color: #35b5eb; }
+        .object-detail-table table .object-detail-left .object-detail-comments .comments-input {
+          display: block;
+          box-sizing: border-box;
+          width: 100%;
+          clear: both;
+          padding: 1em 0; }
+          .object-detail-table table .object-detail-left .object-detail-comments .comments-input input[type=text], .object-detail-table table .object-detail-left .object-detail-comments .comments-input textarea {
+            display: block;
+            box-sizing: border-box;
+            font-weight: 100;
+            font-size: 0.9em;
+            width: 100%;
+            padding: 0.75em;
+            margin: 0 auto;
+            border: 1px solid #ccc; }
+        .object-detail-table table .object-detail-left .object-detail-comments .comments-submit {
+          display: block;
+          box-sizing: border-box;
+          width: 100%;
+          clear: both;
+          margin-bottom: 1em;
+          overflow: auto; }
+          .object-detail-table table .object-detail-left .object-detail-comments .comments-submit input[type=submit] {
+            display: block;
+            box-sizing: border-box;
+            float: left;
+            font-weight: 100;
+            font-size: 0.9em;
+            width: 12em;
+            padding: 1em;
+            margin: 1em auto;
+            border: 0;
+            color: white;
+            cursor: pointer; }
+        .object-detail-table table .object-detail-left .object-detail-comments .comment-post {
+          display: block;
+          box-sizing: border-box;
+          width: 100%;
+          clear: both;
+          overflow: auto;
+          margin: 1em 0;
+          padding-top: 1em;
+          border-top: 1px solid rgba(0, 0, 0, 0.25);
+          color: #666;
+          font-size: 0.9em; }
+          .object-detail-table table .object-detail-left .object-detail-comments .comment-post .comment-post-avatar {
+            display: block;
+            box-sizing: border-box;
+            float: left;
+            width: 10%;
+            height: 3em;
+            background: url("../images/user.jpg");
+            background-size: contain;
+            background-repeat: no-repeat; }
+          .object-detail-table table .object-detail-left .object-detail-comments .comment-post .comment-post-data {
+            display: block;
+            box-sizing: border-box;
+            float: left;
+            width: 90%;
+            padding-left: 0.5em; }
+            .object-detail-table table .object-detail-left .object-detail-comments .comment-post .comment-post-data .comment-post-author {
+              display: block;
+              box-sizing: border-box;
+              width: 100%;
+              clear: both;
+              color: #333;
+              font-size: 1em;
+              font-weight: 500; }
+            .object-detail-table table .object-detail-left .object-detail-comments .comment-post .comment-post-data .comment-post-date {
+              display: block;
+              box-sizing: border-box;
+              width: 100%;
+              clear: both;
+              font-style: italic;
+              font-size: 0.8em;
+              margin-bottom: 0.5em; }
+            .object-detail-table table .object-detail-left .object-detail-comments .comment-post .comment-post-data .comment-post-copy {
+              display: block;
+              box-sizing: border-box;
+              width: 100%;
+              clear: both;
+              color: #999; }
     .object-detail-table table .object-detail-right {
       padding: 0 1em;
       width: 30%;
@@ -909,7 +1014,8 @@ ul.links li a:hover {
   margin: 0 auto;
   padding: 0;
   text-align: left;
-  color: white; }
+  color: white;
+  clear: both; }
   .object-detail-divs .object-detail-image {
     display: block;
     box-sizing: border-box;
@@ -920,18 +1026,17 @@ ul.links li a:hover {
     display: block;
     box-sizing: border-box;
     width: 100%;
-    background: white;
-    padding: 1em; }
+    background: #3f67c0;
+    padding: 1em;
+    overflow: auto; }
     .object-detail-divs .object-detail-desc .object-detail-title {
       font-weight: 300;
       font-size: 1.25em;
-      margin: 1em 0;
-      color: #666; }
+      margin: 1em 0; }
     .object-detail-divs .object-detail-desc .object-detail-count {
       font-weight: 100;
       font-size: 1em;
-      margin: 1em 0;
-      color: #666; }
+      margin: 1em 0; }
       .object-detail-divs .object-detail-desc .object-detail-count .object-count {
         display: inline-block;
         box-sizing: border-box;
@@ -943,15 +1048,13 @@ ul.links li a:hover {
           color: #35b5eb; }
         .object-detail-divs .object-detail-desc .object-detail-count .object-count .count {
           display: inline-block;
-          box-sizing: border-box;
-          color: #ccc; }
+          box-sizing: border-box; }
     .object-detail-divs .object-detail-desc .object-detail-desc {
       font-weight: 100;
       font-size: 0.9em;
       line-height: 1.25em;
       letter-spacing: 0.12em;
       margin: 2em 0;
-      color: #666;
       overflow: auto;
       padding: 0; }
     .object-detail-divs .object-detail-desc .object-detail-like {
@@ -976,8 +1079,7 @@ ul.links li a:hover {
         box-sizing: border-box;
         padding-top: 1em;
         width: 100%;
-        border-top: 1px solid rgba(0, 0, 0, 0.25);
-        color: #666; }
+        border-top: 1px solid rgba(255, 255, 255, 0.25); }
       .object-detail-divs .object-detail-desc .object-detail-links .link-url {
         display: block;
         box-sizing: border-box;
@@ -989,7 +1091,7 @@ ul.links li a:hover {
       margin: 2em 0;
       padding-top: 1em;
       width: 100%;
-      border-top: 1px solid rgba(0, 0, 0, 0.25); }
+      border-top: 1px solid rgba(255, 255, 255, 0.25); }
       .object-detail-divs .object-detail-desc .object-detail-tags .object-tag {
         display: block;
         box-sizing: border-box;
@@ -1005,5 +1107,112 @@ ul.links li a:hover {
     display: block;
     box-sizing: border-box;
     width: 100%;
-    background: orange;
-    height: 20em; }
+    background: white;
+    clear: both;
+    padding: 1em; }
+    .object-detail-divs .object-detail-comments .comments-header {
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      clear: both; }
+      .object-detail-divs .object-detail-comments .comments-header .comments-header-avatar {
+        display: block;
+        box-sizing: border-box;
+        float: left;
+        width: 5em;
+        height: 5em;
+        background: url("../images/user.jpg");
+        background-size: contain;
+        background-repeat: no-repeat; }
+      .object-detail-divs .object-detail-comments .comments-header .comments-header-message {
+        display: block;
+        box-sizing: border-box;
+        float: left;
+        padding-top: 2em;
+        margin-left: 1em;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 1em;
+        color: #35b5eb; }
+    .object-detail-divs .object-detail-comments .comments-input {
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      clear: both;
+      padding: 1em 0; }
+      .object-detail-divs .object-detail-comments .comments-input input[type=text], .object-detail-divs .object-detail-comments .comments-input textarea {
+        display: block;
+        box-sizing: border-box;
+        font-weight: 100;
+        font-size: 0.9em;
+        width: 100%;
+        padding: 0.75em;
+        margin: 0 auto;
+        border: 1px solid #ccc; }
+    .object-detail-divs .object-detail-comments .comments-submit {
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      clear: both;
+      margin-bottom: 1em;
+      overflow: auto; }
+      .object-detail-divs .object-detail-comments .comments-submit input[type=submit] {
+        display: block;
+        box-sizing: border-box;
+        float: left;
+        font-weight: 100;
+        font-size: 0.9em;
+        width: 12em;
+        padding: 1em;
+        margin: 1em auto;
+        border: 0;
+        color: white;
+        cursor: pointer; }
+    .object-detail-divs .object-detail-comments .comment-post {
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      clear: both;
+      overflow: auto;
+      margin: 1em 0;
+      padding-top: 1em;
+      border-top: 1px solid rgba(0, 0, 0, 0.25);
+      color: #666;
+      font-size: 0.9em; }
+      .object-detail-divs .object-detail-comments .comment-post .comment-post-avatar {
+        display: block;
+        box-sizing: border-box;
+        float: left;
+        width: 10%;
+        height: 3em;
+        background: url("../images/user.jpg");
+        background-size: contain;
+        background-repeat: no-repeat; }
+      .object-detail-divs .object-detail-comments .comment-post .comment-post-data {
+        display: block;
+        box-sizing: border-box;
+        float: left;
+        width: 90%;
+        padding-left: 0.5em; }
+        .object-detail-divs .object-detail-comments .comment-post .comment-post-data .comment-post-author {
+          display: block;
+          box-sizing: border-box;
+          width: 100%;
+          clear: both;
+          color: #333;
+          font-size: 1em;
+          font-weight: 500; }
+        .object-detail-divs .object-detail-comments .comment-post .comment-post-data .comment-post-date {
+          display: block;
+          box-sizing: border-box;
+          width: 100%;
+          clear: both;
+          font-style: italic;
+          font-size: 0.8em;
+          margin-bottom: 0.5em; }
+        .object-detail-divs .object-detail-comments .comment-post .comment-post-data .comment-post-copy {
+          display: block;
+          box-sizing: border-box;
+          width: 100%;
+          clear: both;
+          color: #999; }
