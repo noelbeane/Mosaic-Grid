@@ -796,6 +796,46 @@ ul.links li a:hover {
   font-weight: 300;
   font-size: 1em; }
 
+.group-table {
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+  color: white; }
+  .group-table table {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: left; }
+    .group-table table .group-table-left {
+      padding: 0;
+      width: 70%;
+      background: #002b53; }
+    .group-table table .group-table-right {
+      padding: 0 1em;
+      width: 30%;
+      background: #3f67c0;
+      vertical-align: top; }
+      .group-table table .group-table-right .group-table-calendar {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        height: 10em;
+        background: red; }
+      .group-table table .group-table-right .group-table-filters {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        height: 10em;
+        background: green; }
+      .group-table table .group-table-right .group-table-tags {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        height: 10em;
+        background: orange; }
+
 .object-detail-table {
   box-sizing: border-box;
   width: 80%;
