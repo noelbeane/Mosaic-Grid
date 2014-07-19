@@ -5,6 +5,7 @@
     "jquery": "latest",
     "masonry": "latest",
     "modernizr": "latest",
-    "jquery-ui": "latest"
+    "jquery-ui": "latest",
+    "fullcalendar": "latest"
   }
 }
